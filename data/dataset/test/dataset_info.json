@@ -1,0 +1,98 @@
+{
+  "builder_name": "csv",
+  "citation": "",
+  "config_name": "default",
+  "dataset_size": 420,
+  "description": "",
+  "download_checksums": {
+    "/Users/jamie.brandon/code/wandb-sagemaker-issue/data/train.csv": {
+      "num_bytes": 228,
+      "checksum": "8aee7eb0c9487414da81136145903c9b3e4f026b627391220a1fe1b4187e9199"
+    },
+    "/Users/jamie.brandon/code/wandb-sagemaker-issue/data/val.csv": {
+      "num_bytes": 55,
+      "checksum": "f0bfdf0b836c7457d6097fe66a68117542d4cfc92dc778f3c9626452f2188bd7"
+    },
+    "/Users/jamie.brandon/code/wandb-sagemaker-issue/data/test.csv": {
+      "num_bytes": 62,
+      "checksum": "a356f4a1d3278787a2585a9c4c15315ae8fc3bf43e491ea007b690b2a2bc3333"
+    }
+  },
+  "download_size": 345,
+  "features": {
+    "sentence": {
+      "dtype": "string",
+      "id": null,
+      "_type": "Value"
+    },
+    "label": {
+      "dtype": "int64",
+      "id": null,
+      "_type": "Value"
+    },
+    "input_ids": {
+      "feature": {
+        "dtype": "int32",
+        "id": null,
+        "_type": "Value"
+      },
+      "length": -1,
+      "id": null,
+      "_type": "Sequence"
+    },
+    "token_type_ids": {
+      "feature": {
+        "dtype": "int8",
+        "id": null,
+        "_type": "Value"
+      },
+      "length": -1,
+      "id": null,
+      "_type": "Sequence"
+    },
+    "attention_mask": {
+      "feature": {
+        "dtype": "int8",
+        "id": null,
+        "_type": "Value"
+      },
+      "length": -1,
+      "id": null,
+      "_type": "Sequence"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "post_processed": null,
+  "post_processing_size": null,
+  "size_in_bytes": 765,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 289,
+      "num_examples": 8,
+      "dataset_name": "csv"
+    },
+    "val": {
+      "name": "val",
+      "num_bytes": 62,
+      "num_examples": 2,
+      "dataset_name": "csv"
+    },
+    "test": {
+      "name": "test",
+      "num_bytes": 69,
+      "num_examples": 2,
+      "dataset_name": "csv"
+    }
+  },
+  "supervised_keys": null,
+  "task_templates": null,
+  "version": {
+    "version_str": "0.0.0",
+    "description": null,
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}
