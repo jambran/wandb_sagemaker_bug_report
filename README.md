@@ -32,6 +32,15 @@ The error message coming from `wandb` is a bit uninformative.
    source venv_wandb_sagemaker_issue/bin/activate
    pip install -r requirements.txt
    ```
-2. Configure your sagemaker environment
+2. Configure your sagemaker environment. Create and edit `config.py`
+   ```
+   role = "YOUR_ROLE"
+   s3_output_location = f'YOUR_S3_OUTPUT_PATH'
+   image_uri = 'YOUR_IMAGE_URI'
+   ```
+   I was using this image uri from aws
+   ```
+   amazonaws.com/huggingface-pytorch-training:1.8.1-transformers4.6.1-gpu-py36-cu111-ubuntu18.04
+   ```
 3. run `train_sagemaker.py`
 4. The output of this script can be found in `error_message.log`
