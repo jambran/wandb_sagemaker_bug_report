@@ -1,0 +1,1084 @@
+/Users/jamie.brandon/code/wandb-sagemaker-issue/venv_wandb_sagemaker_issue/bin/python /Users/jamie.brandon/code/wandb-sagemaker-issue/train_sagemaker.py
+2021-10-16 11:13:25,042 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2021-10-16 11:13:25,200 - root - INFO - sagemaker role arn: REMOVED
+2021-10-16 11:13:26,679 - root - INFO - sagemaker bucket: REMOVED
+2021-10-16 11:13:26,679 - root - INFO - sagemaker session region: REMOVED
+2021-10-16 11:13:26,679 - root - INFO - setting up the estimator
+2021-10-16 11:13:26,679 - root - INFO - estimator instantiated
+2021-10-16 11:13:26,679 - root - INFO - fitting the estimator
+2021-10-16 11:13:26,680 - sagemaker.image_uris - INFO - Defaulting to the only supported framework/algorithm version: latest.
+2021-10-16 11:13:26,687 - sagemaker.image_uris - INFO - Ignoring unnecessary instance type: None.
+2021-10-16 11:13:27,675 - sagemaker - INFO - Creating training-job with name: debug-wandb-sagemaker-distributed-train-2021-10-16-15-13-26-679
+2021-10-16 15:13:28 Starting - Starting the training job...
+2021-10-16 15:13:51 Starting - Launching requested ML instancesProfilerReport-1634397206: InProgress
+...
+2021-10-16 15:14:32 Starting - Preparing the instances for training......
+2021-10-16 15:15:34 Downloading - Downloading input data...
+2021-10-16 15:15:52 Training - Downloading the training image......................bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+2021-10-16 15:19:55,853 sagemaker-training-toolkit INFO     Imported framework sagemaker_pytorch_container.training
+2021-10-16 15:19:55,892 sagemaker_pytorch_container.training INFO     Block until all host DNS lookups succeed.
+2021-10-16 15:19:58,932 sagemaker_pytorch_container.training INFO     Invoking user training script.
+2021-10-16 15:19:59,547 sagemaker-training-toolkit INFO     Installing dependencies from requirements.txt:
+/opt/conda/bin/python3.6 -m pip install -r requirements.txt
+Collecting aiobotocore==1.2.2
+  Downloading aiobotocore-1.2.2.tar.gz (48 kB)
+Collecting aiohttp==3.7.4.post0
+  Downloading aiohttp-3.7.4.post0-cp36-cp36m-manylinux2014_x86_64.whl (1.3 MB)
+Collecting aioitertools==0.8.0
+  Downloading aioitertools-0.8.0-py3-none-any.whl (21 kB)
+Collecting async-timeout==3.0.1
+  Downloading async_timeout-3.0.1-py3-none-any.whl (8.2 kB)
+Requirement already satisfied: attrs==21.2.0 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 5)) (21.2.0)
+Collecting boto3==1.16.43
+  Downloading boto3-1.16.43-py2.py3-none-any.whl (130 kB)
+Collecting botocore==1.19.52
+  Downloading botocore-1.19.52-py2.py3-none-any.whl (7.2 MB)
+Requirement already satisfied: certifi==2021.5.30 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 8)) (2021.5.30)
+Collecting chardet==4.0.0
+  Downloading chardet-4.0.0-py2.py3-none-any.whl (178 kB)
+Collecting charset-normalizer==2.0.4
+  Downloading charset_normalizer-2.0.4-py3-none-any.whl (36 kB)
+Collecting click==8.0.1
+  Downloading click-8.0.1-py3-none-any.whl (97 kB)
+Collecting configparser==5.0.2
+  Downloading configparser-5.0.2-py3-none-any.whl (19 kB)
+Requirement already satisfied: datasets==1.6.2 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 13)) (1.6.2)
+Requirement already satisfied: dill==0.3.4 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 14)) (0.3.4)
+Collecting docker-pycreds==0.4.0
+  Downloading docker_pycreds-0.4.0-py2.py3-none-any.whl (9.0 kB)
+Requirement already satisfied: filelock==3.0.12 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 16)) (3.0.12)
+Requirement already satisfied: fsspec==2021.7.0 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 17)) (2021.7.0)
+Collecting gitdb==4.0.7
+  Downloading gitdb-4.0.7-py3-none-any.whl (63 kB)
+Collecting GitPython==3.1.18
+  Downloading GitPython-3.1.18-py3-none-any.whl (170 kB)
+Requirement already satisfied: google-pasta==0.2.0 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 20)) (0.2.0)
+Requirement already satisfied: huggingface-hub==0.0.8 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 21)) (0.0.8)
+Collecting idna==3.2
+  Downloading idna-3.2-py3-none-any.whl (59 kB)
+Collecting importlib-metadata==4.8.1
+  Downloading importlib_metadata-4.8.1-py3-none-any.whl (17 kB)
+Requirement already satisfied: jmespath==0.10.0 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 24)) (0.10.0)
+Requirement already satisfied: joblib==1.0.1 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 25)) (1.0.1)
+Collecting multidict==5.1.0
+  Downloading multidict-5.1.0-cp36-cp36m-manylinux2014_x86_64.whl (141 kB)
+Requirement already satisfied: multiprocess==0.70.12.2 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 27)) (0.70.12.2)
+Collecting numpy==1.19.5
+  Downloading numpy-1.19.5-cp36-cp36m-manylinux2010_x86_64.whl (14.8 MB)
+Requirement already satisfied: packaging==21.0 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 29)) (21.0)
+Requirement already satisfied: pandas==1.1.5 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 30)) (1.1.5)
+Requirement already satisfied: pathos==0.2.8 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 31)) (0.2.8)
+Collecting pathtools==0.1.2
+  Downloading pathtools-0.1.2.tar.gz (11 kB)
+Requirement already satisfied: pox==0.3.0 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 33)) (0.3.0)
+Requirement already satisfied: ppft==1.6.6.4 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 34)) (1.6.6.4)
+Collecting promise==2.3
+  Downloading promise-2.3.tar.gz (19 kB)
+Requirement already satisfied: protobuf==3.17.3 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 36)) (3.17.3)
+Requirement already satisfied: protobuf3-to-dict==0.1.5 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 37)) (0.1.5)
+Requirement already satisfied: psutil==5.8.0 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 38)) (5.8.0)
+Collecting pyarrow==5.0.0
+  Downloading pyarrow-5.0.0-cp36-cp36m-manylinux2014_x86_64.whl (23.6 MB)
+Requirement already satisfied: pyparsing==2.4.7 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 40)) (2.4.7)
+Collecting python-dateutil==2.8.2
+  Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+Requirement already satisfied: pytz==2021.1 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 42)) (2021.1)
+Requirement already satisfied: PyYAML==5.4.1 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 43)) (5.4.1)
+Collecting regex==2021.8.28
+  Downloading regex-2021.8.28-cp36-cp36m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (745 kB)
+Collecting requests==2.26.0
+  Downloading requests-2.26.0-py2.py3-none-any.whl (62 kB)
+Collecting s3fs==2021.7.0
+  Downloading s3fs-2021.7.0-py3-none-any.whl (25 kB)
+Collecting s3transfer==0.3.7
+  Downloading s3transfer-0.3.7-py2.py3-none-any.whl (73 kB)
+Requirement already satisfied: sacremoses==0.0.45 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 48)) (0.0.45)
+Collecting sagemaker==2.59.1.post0
+  Downloading sagemaker-2.59.1.post0.tar.gz (442 kB)
+Requirement already satisfied: scikit-learn==0.24.2 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 50)) (0.24.2)
+Requirement already satisfied: scipy==1.5.4 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 51)) (1.5.4)
+Collecting sentry-sdk==1.3.1
+  Downloading sentry_sdk-1.3.1-py2.py3-none-any.whl (133 kB)
+Collecting shortuuid==1.0.1
+  Downloading shortuuid-1.0.1-py3-none-any.whl (7.5 kB)
+Requirement already satisfied: six==1.16.0 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 54)) (1.16.0)
+Requirement already satisfied: sklearn==0.0 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 55)) (0.0)
+Requirement already satisfied: smdebug-rulesconfig==1.0.1 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 56)) (1.0.1)
+Collecting smmap==4.0.0
+  Downloading smmap-4.0.0-py2.py3-none-any.whl (24 kB)
+Collecting subprocess32==3.5.4
+  Downloading subprocess32-3.5.4.tar.gz (97 kB)
+Collecting tensorboard==2.7.0
+  Downloading tensorboard-2.7.0-py3-none-any.whl (5.8 MB)
+Requirement already satisfied: threadpoolctl==2.2.0 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 60)) (2.2.0)
+Requirement already satisfied: tokenizers==0.10.3 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 61)) (0.10.3)
+Requirement already satisfied: torch==1.8.1 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 62)) (1.8.1)
+Collecting tqdm==4.27
+  Downloading tqdm-4.27.0-py2.py3-none-any.whl (44 kB)
+Requirement already satisfied: transformers==4.6.1 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 64)) (4.6.1)
+Collecting typing-extensions==3.10.0.2
+  Downloading typing_extensions-3.10.0.2-py3-none-any.whl (26 kB)
+Collecting urllib3==1.26.6
+  Downloading urllib3-1.26.6-py2.py3-none-any.whl (138 kB)
+Collecting wandb==0.12.4
+  Downloading wandb-0.12.4-py2.py3-none-any.whl (1.7 MB)
+Collecting wrapt==1.12.1
+  Downloading wrapt-1.12.1.tar.gz (27 kB)
+Requirement already satisfied: xxhash==2.0.2 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 69)) (2.0.2)
+Collecting yarl==1.6.3
+  Downloading yarl-1.6.3-cp36-cp36m-manylinux2014_x86_64.whl (293 kB)
+Requirement already satisfied: zipp==3.5.0 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 71)) (3.5.0)
+Collecting idna-ssl>=1.0
+  Downloading idna-ssl-1.1.0.tar.gz (3.4 kB)
+Requirement already satisfied: dataclasses in /opt/conda/lib/python3.6/site-packages (from datasets==1.6.2->-r requirements.txt (line 13)) (0.8)
+Collecting grpcio>=1.24.3
+  Downloading grpcio-1.41.0-cp36-cp36m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.9 MB)
+Requirement already satisfied: wheel>=0.26 in /opt/conda/lib/python3.6/site-packages (from tensorboard==2.7.0->-r requirements.txt (line 59)) (0.35.1)
+Collecting markdown>=2.6.8
+  Downloading Markdown-3.3.4-py3-none-any.whl (97 kB)
+Requirement already satisfied: werkzeug>=0.11.15 in /opt/conda/lib/python3.6/site-packages (from tensorboard==2.7.0->-r requirements.txt (line 59)) (2.0.1)
+Requirement already satisfied: setuptools>=41.0.0 in /opt/conda/lib/python3.6/site-packages (from tensorboard==2.7.0->-r requirements.txt (line 59)) (49.6.0.post20210108)
+Collecting tensorboard-data-server<0.7.0,>=0.6.0
+  Downloading tensorboard_data_server-0.6.1-py3-none-manylinux2010_x86_64.whl (4.9 MB)
+Collecting google-auth-oauthlib<0.5,>=0.4.1
+  Downloading google_auth_oauthlib-0.4.6-py2.py3-none-any.whl (18 kB)
+Collecting absl-py>=0.4
+  Downloading absl_py-0.14.1-py3-none-any.whl (131 kB)
+Collecting google-auth<3,>=1.6.3
+  Downloading google_auth-2.3.0-py2.py3-none-any.whl (154 kB)
+Collecting tensorboard-plugin-wit>=1.6.0
+  Downloading tensorboard_plugin_wit-1.8.0-py3-none-any.whl (781 kB)
+Collecting yaspin>=1.0.0
+  Downloading yaspin-2.1.0-py3-none-any.whl (18 kB)
+Collecting cachetools<5.0,>=2.0.0
+  Downloading cachetools-4.2.4-py3-none-any.whl (10 kB)
+Requirement already satisfied: rsa<5,>=3.1.4 in /opt/conda/lib/python3.6/site-packages (from google-auth<3,>=1.6.3->tensorboard==2.7.0->-r requirements.txt (line 59)) (4.7.2)
+Collecting pyasn1-modules>=0.2.1
+  Downloading pyasn1_modules-0.2.8-py2.py3-none-any.whl (155 kB)
+Collecting requests-oauthlib>=0.7.0
+  Downloading requests_oauthlib-1.3.0-py2.py3-none-any.whl (23 kB)
+Requirement already satisfied: pyasn1<0.5.0,>=0.4.6 in /opt/conda/lib/python3.6/site-packages (from pyasn1-modules>=0.2.1->google-auth<3,>=1.6.3->tensorboard==2.7.0->-r requirements.txt (line 59)) (0.4.8)
+Collecting oauthlib>=3.0.0
+  Downloading oauthlib-3.1.1-py2.py3-none-any.whl (146 kB)
+Collecting termcolor<2.0.0,>=1.1.0
+  Downloading termcolor-1.1.0.tar.gz (3.9 kB)
+Building wheels for collected packages: aiobotocore, pathtools, promise, sagemaker, subprocess32, wrapt, idna-ssl, termcolor
+  Building wheel for aiobotocore (setup.py): started
+  Building wheel for aiobotocore (setup.py): finished with status 'done'
+  Created wheel for aiobotocore: filename=aiobotocore-1.2.2-py3-none-any.whl size=45733 sha256=437688ddd0468886ce8293aa2740326d624d623c488b27791181a2c51a51f837
+  Stored in directory: /root/.cache/pip/wheels/37/f3/76/dfc2d32494696a7e4710b2f57d9d15212226d19c42dc395865
+  Building wheel for pathtools (setup.py): started
+  Building wheel for pathtools (setup.py): finished with status 'done'
+  Created wheel for pathtools: filename=pathtools-0.1.2-py3-none-any.whl size=8785 sha256=d56306e519817b887d6c1bd2b435821316ff153ae76b0587e352a002ff686007
+  Stored in directory: /root/.cache/pip/wheels/42/ea/90/e37d463fb3b03848bf715080595de62545266f53dd546b2497
+  Building wheel for promise (setup.py): started
+  Building wheel for promise (setup.py): finished with status 'done'
+  Created wheel for promise: filename=promise-2.3-py3-none-any.whl size=21494 sha256=9252172925921108e2793b57739938f810b5f9356af8f11ad168bdee9d38205f
+  Stored in directory: /root/.cache/pip/wheels/59/9a/1d/3f1afbbb5122d0410547bf9eb50955f4a7a98e53a6d8b99bd1
+  Building wheel for sagemaker (setup.py): started
+  Building wheel for sagemaker (setup.py): finished with status 'done'
+  Created wheel for sagemaker: filename=sagemaker-2.59.1.post0-py2.py3-none-any.whl size=618598 sha256=09e8748580f8ac903730c51f653b28f7754622b47b0611f31e150a0c6949a2f6
+  Stored in directory: /root/.cache/pip/wheels/a2/fb/05/76ff38dc0f96f0f39539b3041145cda03db021abde8c6f4f42
+  Building wheel for subprocess32 (setup.py): started
+  Building wheel for subprocess32 (setup.py): finished with status 'done'
+  Created wheel for subprocess32: filename=subprocess32-3.5.4-py3-none-any.whl size=6487 sha256=36a1a26550cfaa3093fd618ab66966cadb084d25380f98d851a943032511b934
+  Stored in directory: /root/.cache/pip/wheels/44/3a/ab/102386d84fe551b6cedb628ed1e74c5f5be76af8b909aeda09
+  Building wheel for wrapt (setup.py): started
+  Building wheel for wrapt (setup.py): finished with status 'done'
+  Created wheel for wrapt: filename=wrapt-1.12.1-cp36-cp36m-linux_x86_64.whl size=69745 sha256=4f4e7781b093f44a669d7469bbb69f272997f9b9847d9defe6fcdb7297b9b800
+  Stored in directory: /root/.cache/pip/wheels/32/42/7f/23cae9ff6ef66798d00dc5d659088e57dbba01566f6c60db63
+  Building wheel for idna-ssl (setup.py): started
+  Building wheel for idna-ssl (setup.py): finished with status 'done'
+  Created wheel for idna-ssl: filename=idna_ssl-1.1.0-py3-none-any.whl size=3161 sha256=70363e0c3e1ea8343db617ecd76ef1062371d6d4c1747a1a4ffe11507f537a90
+  Stored in directory: /root/.cache/pip/wheels/6a/f5/9c/f8331a854f7a8739cf0e74c13854e4dd7b1af11b04fe1dde13
+  Building wheel for termcolor (setup.py): started
+  Building wheel for termcolor (setup.py): finished with status 'done'
+  Created wheel for termcolor: filename=termcolor-1.1.0-py3-none-any.whl size=4830 sha256=12b209749829df8906a8da79de82bdff08217c83f7f4473b72600680e57a0ddf
+  Stored in directory: /root/.cache/pip/wheels/93/2a/eb/e58dbcbc963549ee4f065ff80a59f274cc7210b6eab962acdc
+Successfully built aiobotocore pathtools promise sagemaker subprocess32 wrapt idna-ssl termcolor
+Installing collected packages: urllib3, typing-extensions, python-dateutil, multidict, idna, charset-normalizer, yarl, smmap, requests, pyasn1-modules, oauthlib, numpy, importlib-metadata, idna-ssl, chardet, cachetools, botocore, async-timeout, wrapt, tqdm, termcolor, s3transfer, requests-oauthlib, regex, google-auth, gitdb, click, aioitertools, aiohttp, yaspin, tensorboard-plugin-wit, tensorboard-data-server, subprocess32, shortuuid, sentry-sdk, pyarrow, promise, pathtools, markdown, grpcio, google-auth-oauthlib, GitPython, docker-pycreds, configparser, boto3, aiobotocore, absl-py, wandb, tensorboard, sagemaker, s3fs
+  Attempting uninstall: urllib3
+    Found existing installation: urllib3 1.25.11
+    Uninstalling urllib3-1.25.11:
+      Successfully uninstalled urllib3-1.25.11
+  Attempting uninstall: typing-extensions
+    Found existing installation: typing-extensions 3.10.0.0
+    Uninstalling typing-extensions-3.10.0.0:
+      Successfully uninstalled typing-extensions-3.10.0.0
+  Attempting uninstall: python-dateutil
+    Found existing installation: python-dateutil 2.8.1
+    Uninstalling python-dateutil-2.8.1:
+      Successfully uninstalled python-dateutil-2.8.1
+  Attempting uninstall: idna
+    Found existing installation: idna 2.10
+    Uninstalling idna-2.10:
+      Successfully uninstalled idna-2.10
+  Attempting uninstall: requests
+    Found existing installation: requests 2.25.1
+    Uninstalling requests-2.25.1:
+      Successfully uninstalled requests-2.25.1
+  Attempting uninstall: numpy
+    Found existing installation: numpy 1.19.1
+    Uninstalling numpy-1.19.1:
+      Successfully uninstalled numpy-1.19.1
+  Attempting uninstall: importlib-metadata
+    Found existing installation: importlib-metadata 4.6.1
+    Uninstalling importlib-metadata-4.6.1:
+      Successfully uninstalled importlib-metadata-4.6.1
+  Attempting uninstall: chardet
+    Found existing installation: chardet 3.0.4
+    Uninstalling chardet-3.0.4:
+      Successfully uninstalled chardet-3.0.4
+  Attempting uninstall: botocore
+    Found existing installation: botocore 1.20.110
+    Uninstalling botocore-1.20.110:
+      Successfully uninstalled botocore-1.20.110
+  Attempting uninstall: tqdm
+    Found existing installation: tqdm 4.49.0
+    Uninstalling tqdm-4.49.0:
+      Successfully uninstalled tqdm-4.49.0
+  Attempting uninstall: s3transfer
+    Found existing installation: s3transfer 0.4.2
+    Uninstalling s3transfer-0.4.2:
+      Successfully uninstalled s3transfer-0.4.2
+  Attempting uninstall: regex
+    Found existing installation: regex 2021.8.21
+    Uninstalling regex-2021.8.21:
+      Successfully uninstalled regex-2021.8.21
+  Attempting uninstall: click
+    Found existing installation: click 7.1.2
+    Uninstalling click-7.1.2:
+      Successfully uninstalled click-7.1.2
+  Attempting uninstall: pyarrow
+    Found existing installation: pyarrow 4.0.1
+    Uninstalling pyarrow-4.0.1:
+      Successfully uninstalled pyarrow-4.0.1
+  Attempting uninstall: boto3
+    Found existing installation: boto3 1.17.110
+    Uninstalling boto3-1.17.110:
+      Successfully uninstalled boto3-1.17.110
+  Attempting uninstall: sagemaker
+    Found existing installation: sagemaker 2.48.2
+    Uninstalling sagemaker-2.48.2:
+      Successfully uninstalled sagemaker-2.48.2
+  Attempting uninstall: s3fs
+    Found existing installation: s3fs 0.4.2
+    Uninstalling s3fs-0.4.2:
+      Successfully uninstalled s3fs-0.4.2
+Successfully installed GitPython-3.1.18 absl-py-0.14.1 aiobotocore-1.2.2 aiohttp-3.7.4.post0 aioitertools-0.8.0 async-timeout-3.0.1 boto3-1.16.43 botocore-1.19.52 cachetools-4.2.4 chardet-4.0.0 charset-normalizer-2.0.4 click-8.0.1 configparser-5.0.2 docker-pycreds-0.4.0 gitdb-4.0.7 google-auth-2.3.0 google-auth-oauthlib-0.4.6 grpcio-1.41.0 idna-3.2 idna-ssl-1.1.0 importlib-metadata-4.8.1 markdown-3.3.4 multidict-5.1.0 numpy-1.19.5 oauthlib-3.1.1 pathtools-0.1.2 promise-2.3 pyarrow-5.0.0 pyasn1-modules-0.2.8 python-dateutil-2.8.2 regex-2021.8.28 requests-2.26.0 requests-oauthlib-1.3.0 s3fs-2021.7.0 s3transfer-0.3.7 sagemaker-2.59.1.post0 sentry-sdk-1.3.1 shortuuid-1.0.1 smmap-4.0.0 subprocess32-3.5.4 tensorboard-2.7.0 tensorboard-data-server-0.6.1 tensorboard-plugin-wit-1.8.0 termcolor-1.1.0 tqdm-4.27.0 typing-extensions-3.10.0.2 urllib3-1.26.6 wandb-0.12.4 wrapt-1.12.1 yarl-1.6.3 yaspin-2.1.0
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+typer 0.3.2 requires click<7.2.0,>=7.1.1, but you have click 8.0.1 which is incompatible.
+spacy 3.1.0 requires tqdm<5.0.0,>=4.38.0, but you have tqdm 4.27.0 which is incompatible.
+awscli 1.19.110 requires botocore==1.20.110, but you have botocore 1.19.52 which is incompatible.
+awscli 1.19.110 requires s3transfer<0.5.0,>=0.4.0, but you have s3transfer 0.3.7 which is incompatible.
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+2021-10-16 15:20:30,746 sagemaker-training-toolkit INFO     Starting MPI run as worker node.
+2021-10-16 15:20:30,746 sagemaker-training-toolkit INFO     Creating SSH daemon.
+2021-10-16 15:20:30,750 sagemaker-training-toolkit INFO     Waiting for MPI workers to establish their SSH connections
+2021-10-16 15:20:30,750 sagemaker-training-toolkit INFO     Env Hosts: ['algo-1'] Hosts: ['algo-1:4'] process_per_hosts: 4 num_processes: 4
+2021-10-16 15:20:30,751 sagemaker-training-toolkit INFO     Network interface name: eth0
+2021-10-16 15:20:30,792 sagemaker-training-toolkit INFO     Invoking user script
+
+Training Env:
+
+{
+    "additional_framework_parameters": {
+        "sagemaker_mpi_num_of_processes_per_host": 4,
+        "sagemaker_distributed_dataparallel_enabled": false,
+        "sagemaker_mpi_custom_mpi_options": "",
+        "sagemaker_mpi_enabled": true,
+        "sagemaker_instance_type": "ml.g4dn.12xlarge"
+    },
+    "channel_input_dirs": {},
+    "current_host": "algo-1",
+    "framework_module": "sagemaker_pytorch_container.training:main",
+    "hosts": [
+        "algo-1"
+    ],
+    "hyperparameters": {
+        "output_data_dir": REMOVED,
+        "model_id": "bert-base-uncased",
+        "eval_batch_size": 2,
+        "train_batch_size": 8,
+        "warmup_steps": 500,
+        "model_dir": "/opt/ml/model",
+        "dataset": "./data/dataset",
+        "epochs": 1,
+        "learning_rate": 5e-05,
+        "max_grad_norm": 0,
+        "mp_parameters": {
+            "microbatches": 4,
+            "placement_strategy": "spread",
+            "pipeline": "interleaved",
+            "optimize": "speed",
+            "partitions": 4,
+            "ddp": true
+        },
+        "fp16": true
+    },
+    "input_config_dir": "/opt/ml/input/config",
+    "input_data_config": {},
+    "input_dir": "/opt/ml/input",
+    "is_master": true,
+    "job_name": "debug-wandb-sagemaker-distributed-train-2021-10-16-15-13-26-679",
+    "log_level": 20,
+    "master_hostname": "algo-1",
+    "model_dir": "/opt/ml/model",
+    "module_dir": REMOVED,
+    "module_name": "train",
+    "network_interface_name": "eth0",
+    "num_cpus": 48,
+    "num_gpus": 4,
+    "output_data_dir": "/opt/ml/output/data",
+    "output_dir": "/opt/ml/output",
+    "output_intermediate_dir": "/opt/ml/output/intermediate",
+    "resource_config": {
+        "current_host": "algo-1",
+        "hosts": [
+            "algo-1"
+        ],
+        "network_interface_name": "eth0"
+    },
+    "user_entry_point": "train.py"
+}
+
+Environment variables:
+
+SM_HOSTS=["algo-1"]
+SM_NETWORK_INTERFACE_NAME=eth0
+SM_HPS={"dataset":"./data/dataset","epochs":1,"eval_batch_size":2,"fp16":true,"learning_rate":5e-05,"max_grad_norm":0,"model_dir":"/opt/ml/model","model_id":"bert-base-uncased","mp_parameters":{"ddp":true,"microbatches":4,"optimize":"speed","partitions":4,"pipeline":"interleaved","placement_strategy":"spread"},"output_data_dir":"s3://whiq-nlp-experiments/jamie/wandb-sagemaker-issue/debug-wandb-sagemaker-distributed-training","train_batch_size":8,"warmup_steps":500}
+SM_USER_ENTRY_POINT=train.py
+SM_FRAMEWORK_PARAMS={"sagemaker_distributed_dataparallel_enabled":false,"sagemaker_instance_type":"ml.g4dn.12xlarge","sagemaker_mpi_custom_mpi_options":"","sagemaker_mpi_enabled":true,"sagemaker_mpi_num_of_processes_per_host":4}
+SM_RESOURCE_CONFIG={"current_host":"algo-1","hosts":["algo-1"],"network_interface_name":"eth0"}
+SM_INPUT_DATA_CONFIG={}
+SM_OUTPUT_DATA_DIR=/opt/ml/output/data
+SM_CHANNELS=[]
+SM_CURRENT_HOST=algo-1
+SM_MODULE_NAME=train
+SM_LOG_LEVEL=20
+SM_FRAMEWORK_MODULE=sagemaker_pytorch_container.training:main
+SM_INPUT_DIR=/opt/ml/input
+SM_INPUT_CONFIG_DIR=/opt/ml/input/config
+SM_OUTPUT_DIR=/opt/ml/output
+SM_NUM_CPUS=48
+SM_NUM_GPUS=4
+SM_MODEL_DIR=/opt/ml/model
+SM_MODULE_DIR=REMOVED
+SM_TRAINING_ENV={"additional_framework_parameters":{"sagemaker_distributed_dataparallel_enabled":false,"sagemaker_instance_type":"ml.g4dn.12xlarge","sagemaker_mpi_custom_mpi_options":"","sagemaker_mpi_enabled":true,"sagemaker_mpi_num_of_processes_per_host":4},"channel_input_dirs":{},"current_host":"algo-1","framework_module":"sagemaker_pytorch_container.training:main","hosts":["algo-1"],"hyperparameters":{"dataset":"./data/dataset","epochs":1,"eval_batch_size":2,"fp16":true,"learning_rate":5e-05,"max_grad_norm":0,"model_dir":"/opt/ml/model","model_id":"bert-base-uncased","mp_parameters":{"ddp":true,"microbatches":4,"optimize":"speed","partitions":4,"pipeline":"interleaved","placement_strategy":"spread"},"output_data_dir":"s3://whiq-nlp-experiments/jamie/wandb-sagemaker-issue/debug-wandb-sagemaker-distributed-training","train_batch_size":8,"warmup_steps":500},"input_config_dir":"/opt/ml/input/config","input_data_config":{},"input_dir":"/opt/ml/input","is_master":true,"job_name":"debug-wandb-sagemaker-distributed-train-2021-10-16-15-13-26-679","log_level":20,"master_hostname":"algo-1","model_dir":"/opt/ml/model","module_dir":"s3://whiq-nlp-experiments/jamie/wandb-sagemaker-issue/debug-wandb-sagemaker-distributed-training/debug-wandb-sagemaker-distributed-train-2021-10-16-15-13-26-679/source/sourcedir.tar.gz","module_name":"train","network_interface_name":"eth0","num_cpus":48,"num_gpus":4,"output_data_dir":"/opt/ml/output/data","output_dir":"/opt/ml/output","output_intermediate_dir":"/opt/ml/output/intermediate","resource_config":{"current_host":"algo-1","hosts":["algo-1"],"network_interface_name":"eth0"},"user_entry_point":"train.py"}
+SM_USER_ARGS=["--dataset","./data/dataset","--epochs","1","--eval_batch_size","2","--fp16","True","--learning_rate","5e-05","--max_grad_norm","0","--model_dir","/opt/ml/model","--model_id","bert-base-uncased","--mp_parameters","ddp=True,microbatches=4,optimize=speed,partitions=4,pipeline=interleaved,placement_strategy=spread","--output_data_dir","s3://whiq-nlp-experiments/jamie/wandb-sagemaker-issue/debug-wandb-sagemaker-distributed-training","--train_batch_size","8","--warmup_steps","500"]
+SM_OUTPUT_INTERMEDIATE_DIR=/opt/ml/output/intermediate
+SM_HP_OUTPUT_DATA_DIR=REMOVED
+SM_HP_MODEL_ID=bert-base-uncased
+SM_HP_EVAL_BATCH_SIZE=2
+SM_HP_TRAIN_BATCH_SIZE=8
+SM_HP_WARMUP_STEPS=500
+SM_HP_MODEL_DIR=/opt/ml/model
+SM_HP_DATASET=./data/dataset
+SM_HP_EPOCHS=1
+SM_HP_LEARNING_RATE=5e-05
+SM_HP_MAX_GRAD_NORM=0
+SM_HP_MP_PARAMETERS={"ddp":true,"microbatches":4,"optimize":"speed","partitions":4,"pipeline":"interleaved","placement_strategy":"spread"}
+SM_HP_FP16=true
+PYTHONPATH=/opt/ml/code:/opt/conda/bin:/opt/conda/lib/python36.zip:/opt/conda/lib/python3.6:/opt/conda/lib/python3.6/lib-dynload:/opt/conda/lib/python3.6/site-packages
+
+Invoking script with the following command:
+
+mpirun --host algo-1:4 -np 4 --allow-run-as-root --display-map --tag-output -mca btl_tcp_if_include eth0 -mca oob_tcp_if_include eth0 -mca plm_rsh_no_tree_spawn 1 -bind-to none -map-by slot -mca pml ob1 -mca btl ^openib -mca orte_abort_on_non_zero_status 1 -mca btl_vader_single_copy_mechanism none -x NCCL_MIN_NRINGS=4 -x NCCL_SOCKET_IFNAME=eth0 -x NCCL_DEBUG=INFO -x LD_LIBRARY_PATH -x PATH -x LD_PRELOAD=/opt/conda/lib/python3.6/site-packages/gethostname.cpython-36m-x86_64-linux-gnu.so -x SM_HOSTS -x SM_NETWORK_INTERFACE_NAME -x SM_HPS -x SM_USER_ENTRY_POINT -x SM_FRAMEWORK_PARAMS -x SM_RESOURCE_CONFIG -x SM_INPUT_DATA_CONFIG -x SM_OUTPUT_DATA_DIR -x SM_CHANNELS -x SM_CURRENT_HOST -x SM_MODULE_NAME -x SM_LOG_LEVEL -x SM_FRAMEWORK_MODULE -x SM_INPUT_DIR -x SM_INPUT_CONFIG_DIR -x SM_OUTPUT_DIR -x SM_NUM_CPUS -x SM_NUM_GPUS -x SM_MODEL_DIR -x SM_MODULE_DIR -x SM_TRAINING_ENV -x SM_USER_ARGS -x SM_OUTPUT_INTERMEDIATE_DIR -x SM_HP_OUTPUT_DATA_DIR -x SM_HP_MODEL_ID -x SM_HP_EVAL_BATCH_SIZE -x SM_HP_TRAIN_BATCH_SIZE -x SM_HP_WARMUP_STEPS -x SM_HP_MODEL_DIR -x SM_HP_DATASET -x SM_HP_EPOCHS -x SM_HP_LEARNING_RATE -x SM_HP_MAX_GRAD_NORM -x SM_HP_MP_PARAMETERS -x SM_HP_FP16 -x PYTHONPATH /opt/conda/bin/python3.6 -m mpi4py train.py --dataset ./data/dataset --epochs 1 --eval_batch_size 2 --fp16 True --learning_rate 5e-05 --max_grad_norm 0 --model_dir /opt/ml/model --model_id bert-base-uncased --mp_parameters ddp=True,microbatches=4,optimize=speed,partitions=4,pipeline=interleaved,placement_strategy=spread --output_data_dir s3://whiq-nlp-experiments/jamie/wandb-sagemaker-issue/debug-wandb-sagemaker-distributed-training --train_batch_size 8 --warmup_steps 500
+
+
+ Data for JOB [41137,1] offset 0 Total slots allocated 4
+
+ ========================   JOB MAP   ========================
+
+ Data for node: algo-1#011Num slots: 4#011Max slots: 0#011Num procs: 4
+ #011Process OMPI jobid: [41137,1] App: 0 Process rank: 0 Bound: N/A
+ #011Process OMPI jobid: [41137,1] App: 0 Process rank: 1 Bound: N/A
+ #011Process OMPI jobid: [41137,1] App: 0 Process rank: 2 Bound: N/A
+ #011Process OMPI jobid: [41137,1] App: 0 Process rank: 3 Bound: N/A
+
+ =============================================================
+[1,0]<stdout>:[2021-10-16 15:20:36.744: I smdistributed/modelparallel/torch/state_mod.py:108] [0] Finished initializing torch distributed process groups. pp_rank: 0, dp_rank: 0
+[1,3]<stdout>:[2021-10-16 15:20:36.744: I smdistributed/modelparallel/torch/state_mod.py:108] [3] Finished initializing torch distributed process groups. pp_rank: 3, dp_rank: 0
+[1,2]<stdout>:[2021-10-16 15:20:36.745: I smdistributed/modelparallel/torch/state_mod.py:108] [2] Finished initializing torch distributed process groups. pp_rank: 2, dp_rank: 0
+[1,1]<stdout>:[2021-10-16 15:20:36.754: I smdistributed/modelparallel/torch/state_mod.py:108] [1] Finished initializing torch distributed process groups. pp_rank: 1, dp_rank: 0
+[1,1]<stdout>:
+
+2021-10-16 15:20:53 Training - Training image download completed. Training in progress.[1,1]<stdout>:Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertForSequenceClassification: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.weight', 'cls.predictions.decoder.weight']
+[1,1]<stdout>:- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+[1,1]<stdout>:- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+[1,1]<stdout>:Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+[1,1]<stdout>:You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[1,1]<stdout>:[2021-10-16 15:20:53.069 algo-1:92 INFO utils.py:27] RULE_JOB_STOP_SIGNAL_FILENAME: None
+[1,1]<stdout>:[2021-10-16 15:20:53.161 algo-1:92 INFO profiler_config_parser.py:102] User has disabled profiler.
+[1,1]<stdout>:[2021-10-16 15:20:53.162 algo-1:92 INFO json_config.py:91] Creating hook from json_config at /opt/ml/input/config/debughookconfig.json.
+[1,1]<stdout>:[2021-10-16 15:20:53.163 algo-1:92 INFO hook.py:201] tensorboard_dir has not been set for the hook. SMDebug will not be exporting tensorboard summaries.
+[1,1]<stdout>:[2021-10-16 15:20:53.164 algo-1:92 INFO hook.py:255] Saving to /opt/ml/output/tensors
+[1,1]<stdout>:[2021-10-16 15:20:53.164 algo-1:92 INFO state_store.py:77] The checkpoint config file /opt/ml/input/config/checkpointconfig.json does not exist.
+[1,2]<stdout>:Problem at: train.py 75 <module>
+[1,0]<stdout>:Problem at: train.py 75 <module>
+[1,3]<stdout>:Problem at: train.py 75 <module>
+[1,1]<stderr>:INFO:root:Added key: store_based_barrier_key:1 to store for rank: 1
+[1,3]<stderr>:INFO:root:Added key: store_based_barrier_key:1 to store for rank: 3
+[1,2]<stderr>:INFO:root:Added key: store_based_barrier_key:1 to store for rank: 2
+[1,1]<stderr>:INFO:root:Added key: store_based_barrier_key:2 to store for rank: 1
+[1,0]<stderr>:INFO:root:Added key: store_based_barrier_key:1 to store for rank: 0
+[1,3]<stderr>:INFO:root:Added key: store_based_barrier_key:2 to store for rank: 3
+[1,2]<stderr>:INFO:root:Added key: store_based_barrier_key:2 to store for rank: 2
+[1,0]<stderr>:INFO:root:Added key: store_based_barrier_key:2 to store for rank: 0
+[1,2]<stderr>:INFO:root:Added key: store_based_barrier_key:3 to store for rank: 2
+[1,0]<stderr>:INFO:root:Added key: store_based_barrier_key:3 to store for rank: 0
+[1,1]<stderr>:INFO:root:Added key: store_based_barrier_key:3 to store for rank: 1
+[1,3]<stderr>:INFO:root:Added key: store_based_barrier_key:3 to store for rank: 3
+[1,3]<stderr>:INFO:root:Added key: store_based_barrier_key:4 to store for rank: 3
+[1,0]<stderr>:INFO:root:Added key: store_based_barrier_key:4 to store for rank: 0
+[1,2]<stderr>:INFO:root:Added key: store_based_barrier_key:4 to store for rank: 2
+[1,1]<stderr>:INFO:root:Added key: store_based_barrier_key:4 to store for rank: 1
+[1,1]<stderr>:INFO:root:Added key: store_based_barrier_key:5 to store for rank: 1
+[1,3]<stderr>:INFO:root:Added key: store_based_barrier_key:5 to store for rank: 3
+[1,0]<stderr>:INFO:root:Added key: store_based_barrier_key:5 to store for rank: 0
+[1,2]<stderr>:INFO:root:Added key: store_based_barrier_key:5 to store for rank: 2
+[1,2]<stderr>:INFO:root:Added key: store_based_barrier_key:6 to store for rank: 2
+[1,1]<stderr>:INFO:root:Added key: store_based_barrier_key:6 to store for rank: 1
+[1,3]<stderr>:INFO:root:Added key: store_based_barrier_key:6 to store for rank: 3
+[1,0]<stderr>:INFO:root:Added key: store_based_barrier_key:6 to store for rank: 0
+[1,3]<stderr>:INFO:root:Added key: store_based_barrier_key:7 to store for rank: 3
+[1,0]<stderr>:INFO:root:Added key: store_based_barrier_key:7 to store for rank: 0
+[1,2]<stderr>:INFO:root:Added key: store_based_barrier_key:7 to store for rank: 2
+[1,1]<stderr>:INFO:root:Added key: store_based_barrier_key:7 to store for rank: 1
+[1,1]<stderr>:INFO:root:Added key: store_based_barrier_key:8 to store for rank: 1
+[1,3]<stderr>:INFO:root:Added key: store_based_barrier_key:8 to store for rank: 3
+[1,0]<stderr>:INFO:root:Added key: store_based_barrier_key:8 to store for rank: 0
+[1,2]<stderr>:INFO:root:Added key: store_based_barrier_key:8 to store for rank: 2
+[1,2]<stderr>:INFO:root:Added key: store_based_barrier_key:9 to store for rank: 2
+[1,1]<stderr>:INFO:root:Added key: store_based_barrier_key:9 to store for rank: 1
+[1,3]<stderr>:INFO:root:Added key: store_based_barrier_key:9 to store for rank: 3
+[1,0]<stderr>:INFO:root:Added key: store_based_barrier_key:9 to store for rank: 0
+[1,0]<stderr>:INFO:root:Added key: store_based_barrier_key:10 to store for rank: 0
+[1,3]<stderr>:INFO:root:Added key: store_based_barrier_key:10 to store for rank: 3
+[1,2]<stderr>:INFO:root:Added key: store_based_barrier_key:10 to store for rank: 2
+[1,1]<stderr>:INFO:root:Added key: store_based_barrier_key:10 to store for rank: 1
+[1,1]<stderr>:INFO:root:Added key: store_based_barrier_key:11 to store for rank: 1
+[1,0]<stderr>:INFO:root:Added key: store_based_barrier_key:11 to store for rank: 0
+[1,3]<stderr>:INFO:root:Added key: store_based_barrier_key:11 to store for rank: 3
+[1,2]<stderr>:INFO:root:Added key: store_based_barrier_key:11 to store for rank: 2
+[1,2]<stderr>:INFO:root:Added key: store_based_barrier_key:12 to store for rank: 2
+[1,1]<stderr>:INFO:root:Added key: store_based_barrier_key:12 to store for rank: 1
+[1,0]<stderr>:INFO:root:Added key: store_based_barrier_key:12 to store for rank: 0
+[1,3]<stderr>:INFO:root:Added key: store_based_barrier_key:12 to store for rank: 3
+[1,0]<stderr>:INFO:root:Added key: store_based_barrier_key:13 to store for rank: 0
+[1,3]<stderr>:INFO:root:Added key: store_based_barrier_key:13 to store for rank: 3
+[1,2]<stderr>:INFO:root:Added key: store_based_barrier_key:13 to store for rank: 2
+[1,1]<stderr>:INFO:root:Added key: store_based_barrier_key:13 to store for rank: 1
+[1,1]<stderr>:INFO:root:Added key: store_based_barrier_key:14 to store for rank: 1
+[1,0]<stderr>:INFO:root:Added key: store_based_barrier_key:14 to store for rank: 0
+[1,3]<stderr>:INFO:root:Added key: store_based_barrier_key:14 to store for rank: 3
+[1,2]<stderr>:INFO:root:Added key: store_based_barrier_key:14 to store for rank: 2
+[1,2]<stderr>:wandb: Currently logged in as: jamie-brandon (use `wandb login --relogin` to force relogin)
+[1,0]<stderr>:wandb: Currently logged in as: jamie-brandon (use `wandb login --relogin` to force relogin)
+[1,1]<stderr>:wandb: Currently logged in as: jamie-brandon (use `wandb login --relogin` to force relogin)
+[1,3]<stderr>:wandb: Currently logged in as: jamie-brandon (use `wandb login --relogin` to force relogin)
+[1,2]<stderr>:Thread WriterThread:
+[1,2]<stderr>:Traceback (most recent call last):
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/internal_util.py", line 52, in run
+[1,2]<stderr>:    self._run()
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/internal_util.py", line 102, in _run
+[1,2]<stderr>:    self._process(record)
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/internal.py", line 331, in _process
+[1,2]<stderr>:    self._wm.write(record)
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/writer.py", line 30, in write
+[1,2]<stderr>:    self.open()
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/writer.py", line 26, in open
+[1,2]<stderr>:    self._ds.open_for_write(self._settings.sync_file)
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/datastore.py", line 79, in open_for_write
+[1,2]<stderr>:    self._fp = open(fname, open_flags)
+[1,2]<stderr>:FileExistsError: [Errno 17] File exists: '/opt/ml/code/wandb/run-20211016_152038-debug-wandb-sagemaker-distributed-train-2021-10-16-15-13-26-679-algo-1/run-debug-wandb-sagemaker-distributed-train-2021-10-16-15-13-26-679-algo-1.wandb'
+[1,0]<stderr>:Thread WriterThread:
+[1,0]<stderr>:Traceback (most recent call last):
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/internal_util.py", line 52, in run
+[1,0]<stderr>:    self._run()
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/internal_util.py", line 102, in _run
+[1,0]<stderr>:    self._process(record)
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/internal.py", line 331, in _process
+[1,0]<stderr>:    self._wm.write(record)
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/writer.py", line 30, in write
+[1,0]<stderr>:    self.open()
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/writer.py", line 26, in open
+[1,0]<stderr>:    self._ds.open_for_write(self._settings.sync_file)
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/datastore.py", line 79, in open_for_write
+[1,0]<stderr>:    self._fp = open(fname, open_flags)
+[1,0]<stderr>:FileExistsError: [Errno 17] File exists: '/opt/ml/code/wandb/run-20211016_152038-debug-wandb-sagemaker-distributed-train-2021-10-16-15-13-26-679-algo-1/run-debug-wandb-sagemaker-distributed-train-2021-10-16-15-13-26-679-algo-1.wandb'
+[1,3]<stderr>:Thread WriterThread:
+[1,3]<stderr>:Traceback (most recent call last):
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/internal_util.py", line 52, in run
+[1,3]<stderr>:    self._run()
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/internal_util.py", line 102, in _run
+[1,3]<stderr>:    self._process(record)
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/internal.py", line 331, in _process
+[1,3]<stderr>:    self._wm.write(record)
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/writer.py", line 30, in write
+[1,3]<stderr>:    self.open()
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/writer.py", line 26, in open
+[1,3]<stderr>:    self._ds.open_for_write(self._settings.sync_file)
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/datastore.py", line 79, in open_for_write
+[1,3]<stderr>:    self._fp = open(fname, open_flags)
+[1,3]<stderr>:FileExistsError: [Errno 17] File exists: '/opt/ml/code/wandb/run-20211016_152038-debug-wandb-sagemaker-distributed-train-2021-10-16-15-13-26-679-algo-1/run-debug-wandb-sagemaker-distributed-train-2021-10-16-15-13-26-679-algo-1.wandb'
+[1,1]<stderr>:
+[1,1]<stderr>:CondaEnvException: Unable to determine environment
+[1,1]<stderr>:
+[1,1]<stderr>:Please re-run this command with one of the following options:
+[1,1]<stderr>:
+[1,1]<stderr>:* Provide an environment name via --name or -n
+[1,1]<stderr>:* Re-run this command inside an activated conda environment.
+[1,1]<stderr>:
+[1,1]<stderr>:wandb: Tracking run with wandb version 0.12.4
+[1,1]<stderr>:wandb: Syncing run debug-wandb-sagemaker-distributed-train-2021-10-16-15-13-26-679-algo-1
+[1,1]<stderr>:wandb: ⭐️ View project at https://wandb.ai/jamie-brandon/wandb-sagemaker-distributed-bug
+[1,1]<stderr>:wandb: 🚀 View run at https://wandb.ai/jamie-brandon/wandb-sagemaker-distributed-bug/runs/debug-wandb-sagemaker-distributed-train-2021-10-16-15-13-26-679-algo-1
+2021-10-16 15:21:11,636 sagemaker-training-toolkit ERROR    ExecuteUserScriptError:
+Command "mpirun --host algo-1:4 -np 4 --allow-run-as-root --display-map --tag-output -mca btl_tcp_if_include eth0 -mca oob_tcp_if_include eth0 -mca plm_rsh_no_tree_spawn 1 -bind-to none -map-by slot -mca pml ob1 -mca btl ^openib -mca orte_abort_on_non_zero_status 1 -mca btl_vader_single_copy_mechanism none -x NCCL_MIN_NRINGS=4 -x NCCL_SOCKET_IFNAME=eth0 -x NCCL_DEBUG=INFO -x LD_LIBRARY_PATH -x PATH -x LD_PRELOAD=/opt/conda/lib/python3.6/site-packages/gethostname.cpython-36m-x86_64-linux-gnu.so -x SM_HOSTS -x SM_NETWORK_INTERFACE_NAME -x SM_HPS -x SM_USER_ENTRY_POINT -x SM_FRAMEWORK_PARAMS -x SM_RESOURCE_CONFIG -x SM_INPUT_DATA_CONFIG -x SM_OUTPUT_DATA_DIR -x SM_CHANNELS -x SM_CURRENT_HOST -x SM_MODULE_NAME -x SM_LOG_LEVEL -x SM_FRAMEWORK_MODULE -x SM_INPUT_DIR -x SM_INPUT_CONFIG_DIR -x SM_OUTPUT_DIR -x SM_NUM_CPUS -x SM_NUM_GPUS -x SM_MODEL_DIR -x SM_MODULE_DIR -x SM_TRAINING_ENV -x SM_USER_ARGS -x SM_OUTPUT_INTERMEDIATE_DIR -x SM_HP_OUTPUT_DATA_DIR -x SM_HP_MODEL_ID -x SM_HP_EVAL_BATCH_SIZE -x SM_HP_TRAIN_BATCH_SIZE -x SM_HP_WARMUP_STEPS -x SM_HP_MODEL_DIR -x SM_HP_DATASET -x SM_HP_EPOCHS -x SM_HP_LEARNING_RATE -x SM_HP_MAX_GRAD_NORM -x SM_HP_MP_PARAMETERS -x SM_HP_FP16 -x PYTHONPATH /opt/conda/bin/python3.6 -m mpi4py train.py --dataset ./data/dataset --epochs 1 --eval_batch_size 2 --fp16 True --learning_rate 5e-05 --max_grad_norm 0 --model_dir /opt/ml/model --model_id bert-base-uncased --mp_parameters ddp=True,microbatches=4,optimize=speed,partitions=4,pipeline=interleaved,placement_strategy=spread --output_data_dir s3://whiq-nlp-experiments/jamie/wandb-sagemaker-issue/debug-wandb-sagemaker-distributed-training --train_batch_size 8 --warmup_steps 500"
+[1,1]<stderr>:INFO:root:Added key: store_based_barrier_key:1 to store for rank: 1
+[1,3]<stderr>:INFO:root:Added key: store_based_barrier_key:1 to store for rank: 3
+[1,2]<stderr>:INFO:root:Added key: store_based_barrier_key:1 to store for rank: 2
+[1,1]<stderr>:INFO:root:Added key: store_based_barrier_key:2 to store for rank: 1
+[1,0]<stderr>:INFO:root:Added key: store_based_barrier_key:1 to store for rank: 0
+[1,3]<stderr>:INFO:root:Added key: store_based_barrier_key:2 to store for rank: 3
+[1,2]<stderr>:INFO:root:Added key: store_based_barrier_key:2 to store for rank: 2
+[1,0]<stderr>:INFO:root:Added key: store_based_barrier_key:2 to store for rank: 0
+[1,2]<stderr>:INFO:root:Added key: store_based_barrier_key:3 to store for rank: 2
+[1,0]<stderr>:INFO:root:Added key: store_based_barrier_key:3 to store for rank: 0
+[1,1]<stderr>:INFO:root:Added key: store_based_barrier_key:3 to store for rank: 1
+[1,3]<stderr>:INFO:root:Added key: store_based_barrier_key:3 to store for rank: 3
+[1,3]<stderr>:INFO:root:Added key: store_based_barrier_key:4 to store for rank: 3
+[1,0]<stderr>:INFO:root:Added key: store_based_barrier_key:4 to store for rank: 0
+[1,1]<stderr>:wandb: Run data is saved locally in /opt/ml/code/wandb/run-20211016_152038-debug-wandb-sagemaker-distributed-train-2021-10-16-15-13-26-679-algo-1
+[1,1]<stderr>:wandb: Run `wandb offline` to turn off syncing.
+[1,1]<stderr>:INFO:filelock:Lock 140471948870712 acquired on /root/.cache/huggingface/transformers/3c61d016573b14f7f008c02c4e51a366c67ab274726fe2910691e2a761acf43e.37395cee442ab11005bcd270f3c34464dc1704b715b5d7d52b1a461abe3b9e4e.lock
+[1,1]<stderr>:#015Downloading:   0%|          | 0.00/570 [00:00<?, ?B/s][1,1]<stderr>:#015Downloading: 100%|██████████| 570/570 [00:00<00:00, 877kB/s][1,1]<stderr>:
+[1,1]<stderr>:INFO:filelock:Lock 140471948870712 released on /root/.cache/huggingface/transformers/3c61d016573b14f7f008c02c4e51a366c67ab274726fe2910691e2a761acf43e.37395cee442ab11005bcd270f3c34464dc1704b715b5d7d52b1a461abe3b9e4e.lock
+[1,1]<stderr>:INFO:filelock:Lock 140471942280584 acquired on /root/.cache/huggingface/transformers/45c3f7a79a80e1cf0a489e5c62b43f173c15db47864303a55d623bb3c96f72a5.d789d64ebfe299b0e416afc4a169632f903f693095b4629a7ea271d5a0cf2c99.lock
+[1,1]<stderr>:#015Downloading:   0%|          | 0.00/232k [00:00<?, ?B/s][1,1]<stderr>:#015Downloading:  39%|███▉      | 90.1k/232k [00:00<00:00, 506kB/s][1,2]<stderr>:wandb: ERROR Internal wandb error: file data was not synced
+[1,0]<stderr>:wandb: ERROR Internal wandb error: file data was not synced
+[1,2]<stderr>:INFO:root:Added key: store_based_barrier_key:4 to store for rank: 2
+[1,1]<stderr>:INFO:root:Added key: store_based_barrier_key:4 to store for rank: 1
+[1,1]<stderr>:INFO:root:Added key: store_based_barrier_key:5 to store for rank: 1
+[1,3]<stderr>:INFO:root:Added key: store_based_barrier_key:5 to store for rank: 3
+[1,0]<stderr>:INFO:root:Added key: store_based_barrier_key:5 to store for rank: 0
+[1,2]<stderr>:INFO:root:Added key: store_based_barrier_key:5 to store for rank: 2
+[1,2]<stderr>:INFO:root:Added key: store_based_barrier_key:6 to store for rank: 2
+[1,1]<stderr>:INFO:root:Added key: store_based_barrier_key:6 to store for rank: 1
+[1,3]<stderr>:INFO:root:Added key: store_based_barrier_key:6 to store for rank: 3
+[1,0]<stderr>:INFO:root:Added key: store_based_barrier_key:6 to store for rank: 0
+[1,3]<stderr>:wandb: ERROR Internal wandb error: file data was not synced
+[1,1]<stderr>:#015Downloading: 100%|██████████| 232k/232k [00:00<00:00, 862kB/s]
+[1,1]<stderr>:INFO:filelock:Lock 140471942280584 released on /root/.cache/huggingface/transformers/45c3f7a79a80e1cf0a489e5c62b43f173c15db47864303a55d623bb3c96f72a5.d789d64ebfe299b0e416afc4a169632f903f693095b4629a7ea271d5a0cf2c99.lock
+[1,1]<stderr>:INFO:filelock:Lock 140471942112928 acquired on /root/.cache/huggingface/transformers/534479488c54aeaf9c3406f647aa2ec13648c06771ffe269edabebd4c412da1d.7f2721073f19841be16f41b0a70b600ca6b880c8f3df6f3535cbc704371bdfa4.lock
+[1,1]<stderr>:#015Downloading:   0%|          | 0.00/466k [00:00<?, ?B/s][1,1]<stderr>:#015Downloading:   6%|▌         | 28.7k/466k [00:00<00:02, 161kB/s][1,1]<stderr>:#015Downloading:  40%|███▉      | 184k/466k [00:00<00:01, 217kB/s] [1,1]<stderr>:#015Downloading:  85%|████████▌ | 397k/466k [00:00<00:00, 293kB/s][1,1]<stderr>:#015Downloading: 100%|██████████| 466k/466k [00:00<00:00, 1.04MB/s][1,1]<stderr>:
+[1,1]<stderr>:INFO:filelock:Lock 140471942112928 released on /root/.cache/huggingface/transformers/534479488c54aeaf9c3406f647aa2ec13648c06771ffe269edabebd4c412da1d.7f2721073f19841be16f41b0a70b600ca6b880c8f3df6f3535cbc704371bdfa4.lock
+[1,1]<stderr>:INFO:filelock:Lock 140471939623176 acquired on /root/.cache/huggingface/transformers/c1d7f0a763fb63861cc08553866f1fc3e5a6f4f07621be277452d26d71303b7e.20430bd8e10ef77a7d2977accefe796051e01bc2fc4aa146bc862997a1a15e79.lock
+[1,1]<stderr>:#015Downloading:   0%|          | 0.00/28.0 [00:00<?, ?B/s][1,1]<stderr>:#015Downloading: 100%|██████████| 28.0/28.0 [00:00<00:00, 52.8kB/s][1,1]<stderr>:
+[1,1]<stderr>:INFO:filelock:Lock 140471939623176 released on /root/.cache/huggingface/transformers/c1d7f0a763fb63861cc08553866f1fc3e5a6f4f07621be277452d26d71303b7e.20430bd8e10ef77a7d2977accefe796051e01bc2fc4aa146bc862997a1a15e79.lock
+[1,1]<stderr>:INFO:__main__: loaded train dataset length is: 8
+[1,1]<stderr>:INFO:__main__: loaded val dataset length is: 2
+[1,1]<stderr>:INFO:__main__: loaded test dataset length is: 2
+[1,1]<stderr>:INFO:filelock:Lock 140471938876920 acquired on /root/.cache/huggingface/transformers/a8041bf617d7f94ea26d15e218abd04afc2004805632abc0ed2066aa16d50d04.faf6ea826ae9c5867d12b22257f9877e6b8367890837bd60f7c54a29633f7f2f.lock
+[1,1]<stderr>:#015Downloading:   0%|          | 0.00/440M [00:00<?, ?B/s][1,1]<stderr>:#015Downloading:   1%|          | 4.68M/440M [00:00<00:09, 46.3MB/s][1,1]<stderr>:#015Downloading:   2%|▏         | 8.68M/440M [00:00<00:09, 44.2MB/s][1,1]<stderr>:#015Downloading:   4%|▎         | 16.3M/440M [00:00<00:08, 50.6MB/s][1,1]<stderr>:#015Downloading:   6%|▌         | 24.4M/440M [00:00<00:07, 57.1MB/s][1,1]<stderr>:#015Downloading:   7%|▋         | 31.3M/440M [00:00<00:06, 59.6MB/s][1,1]<stderr>:#015Downloading:   9%|▉         | 38.7M/440M [00:00<00:06, 63.4MB/s][1,1]<stderr>:#015Downloading:  11%|█         | 46.8M/440M [00:00<00:05, 67.7MB/s][1,1]<stderr>:#015Downloading:  12%|█▏        | 55.0M/440M [00:00<00:05, 71.5MB/s][1,1]<stderr>:#015Downloading:  14%|█▍        | 63.0M/440M [00:00<00:05, 73.9MB/s][1,1]<stderr>:#015Downloading:  16%|█▌        | 71.1M/440M [00:01<00:04, 76.0MB/s][1,1]<stderr>:#015Downloading:  18%|█▊        | 79.2M/440M [00:01<00:04, 77.4MB/s][1,1]<stderr>:#015Downloading:  20%|█▉        | 87.0M/440M [00:01<00:04, 74.2MB/s][1,1]<stderr>:#015Downloading:  21%|██▏       | 94.5M/440M [00:01<00:04, 72.3MB/s][1,1]<stderr>:#015Downloading:  23%|██▎       | 102M/440M [00:01<00:04, 72.2MB/s] [1,1]<stderr>:#015Downloading:  25%|██▍       | 109M/440M [00:01<00:04, 72.0MB/s][1,1]<stderr>:#015Downloading:  26%|██▋       | 116M/440M [00:01<00:04, 72.0MB/s][1,1]<stderr>:#015Downloading:  28%|██▊       | 123M/440M [00:01<00:04, 71.6MB/s][1,1]<stderr>:#015Downloading:  30%|██▉       | 131M/440M [00:01<00:04, 71.4MB/s][1,1]<stderr>:#015Downloading:  32%|███▏      | 139M/440M [00:01<00:04, 74.3MB/s][1,1]<stderr>:#015Downloading:  33%|███▎      | 147M/440M [00:02<00:03, 76.3MB/s][1,1]<stderr>:#015Downloading:  35%|███▌      | 155M/440M [00:02<00:03, 77.7MB/s][1,1]<stderr>:#015Downloading:  37%|███▋      | 163M/440M [00:02<00:03, 73.1MB/s][1,1]<stderr>:#015Downloading:  39%|███▉      | 171M/440M [00:02<00:03, 75.1MB/s][1,1]<stderr>:#015Downloading:  41%|████      | 179M/440M [00:02<00:03, 76.6MB/s][1,1]<stderr>:#015Downloading:  42%|████▏     | 187M/440M [00:02<00:03, 76.1MB/s][1,1]<stderr>:#015Downloading:  44%|████▍     | 195M/440M [00:02<00:03, 77.4MB/s][1,1]<stderr>:#015Downloading:  46%|████▌     | 203M/440M [00:02<00:03, 77.8MB/s][1,1]<stderr>:#015Downloading:  48%|████▊     | 211M/440M [00:02<00:02, 78.4MB/s][1,1]<stderr>:#015Downloading:  50%|████▉     | 219M/440M [00:02<00:02, 79.0MB/s][1,1]<stderr>:#015Downloading:  51%|█████▏    | 227M/440M [00:03<00:02, 79.7MB/s][1,1]<stderr>:#015Downloading:  53%|█████▎    | 235M/440M [00:03<00:02, 78.1MB/s][1,1]<stderr>:#015Downloading:  55%|█████▌    | 243M/440M [00:03<00:02, 75.3MB/s][1,1]<stderr>:#015Downloading:  57%|█████▋    | 250M/440M [00:03<00:02, 75.8MB/s][1,1]<stderr>:#015Downloading:  59%|█████▊    | 258M/440M [00:03<00:02, 69.6MB/s][1,1]<stderr>:#015Downloading:  60%|██████    | 265M/440M [00:03<00:02, 70.2MB/s][1,1]<stderr>:#015Downloading:  62%|██████▏   | 273M/440M [00:03<00:02, 73.1MB/s][1,1]<stderr>:#015Downloading:  64%|██████▎   | 281M/440M [00:03<00:02, 74.1MB/s][1,1]<stderr>:#015Downloading:  66%|██████▌   | 289M/440M [00:03<00:02, 75.5MB/s][1,1]<stderr>:#015Downloading:  67%|██████▋   | 296M/440M [00:04<00:02, 69.1MB/s][1,1]<stderr>:#015Downloading:  69%|██████▉   | 304M/440M [00:04<00:01, 70.3MB/s][1,1]<stderr>:#015Downloading:  71%|███████   | 312M/440M [00:04<00:01, 72.9MB/s][1,1]<stderr>:#015Downloading:  72%|███████▏  | 319M/440M [00:04<00:01, 67.1MB/s][1,1]<stderr>:#015Downloading:  74%|███████▍  | 327M/440M [00:04<00:01, 69.2MB/s][1,1]<stderr>:#015Downloading:  76%|███████▌  | 334M/440M [00:04<00:01, 70.5MB/s][1,1]<stderr>:#015Downloading:  78%|███████▊  | 342M/440M [00:04<00:01, 73.1MB/s][1,1]<stderr>:#015Downloading:  79%|███████▉  | 350M/440M [00:04<00:01, 75.2MB/s][1,1]<stderr>:#015Downloading:  81%|████████  | 358M/440M [00:04<00:01, 76.4MB/s][1,1]<stderr>:#015Downloading:  83%|████████▎ | 366M/440M [00:04<00:00, 77.2MB/s][1,1]<stderr>:#015Downloading:  85%|████████▍ | 374M/440M [00:05<00:00, 78.0MB/s][1,1]<stderr>:#015Downloading:  87%|████████▋ | 382M/440M [00:05<00:00, 77.3MB/s][1,1]<stderr>:#015Downloading:  88%|████████▊ | 389M/440M [00:05<00:00, 76.8MB/s][1,1]<stderr>:#015Downloading:  90%|█████████ | 397M/440M [00:05<00:00, 68.4MB/s][1,1]<stderr>:#015Downloading:  92%|█████████▏| 404M/440M [00:05<00:00, 68.6MB/s][1,1]<stderr>:#015Downloading:  94%|█████████▎| 412M/440M [00:05<00:00, 71.3MB/s][1,1]<stderr>:#015Downloading:  95%|█████████▌| 420M/440M [00:05<00:00, 73.7MB/s][1,1]<stderr>:#015Downloading:  97%|█████████▋| 428M/440M [00:05<00:00, 75.0MB/s][1,1]<stderr>:#015Downloading:  99%|█████████▉| 435M/440M [00:05<00:00, 74.9MB/s][1,1]<stderr>:#015Downloading: 100%|██████████| 440M/440M [00:05<00:00, 73.5MB/s]
+[1,1]<stderr>:INFO:filelock:Lock 140471938876920 released on /root/.cache/huggingface/transformers/a8041bf617d7f94ea26d15e218abd04afc2004805632abc0ed2066aa16d50d04.faf6ea826ae9c5867d12b22257f9877e6b8367890837bd60f7c54a29633f7f2f.lock
+[1,1]<stderr>:Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertForSequenceClassification: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.weight', 'cls.predictions.decoder.weight']
+[1,1]<stderr>:- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+[1,1]<stderr>:- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).[1,1]<stderr>:
+[1,3]<stderr>:INFO:root:Added key: store_based_barrier_key:7 to store for rank: 3
+[1,0]<stderr>:INFO:root:Added key: store_based_barrier_key:7 to store for rank: 0
+[1,2]<stderr>:INFO:root:Added key: store_based_barrier_key:7 to store for rank: 2
+[1,1]<stderr>:INFO:root:Added key: store_based_barrier_key:7 to store for rank: 1
+[1,1]<stderr>:INFO:root:Added key: store_based_barrier_key:8 to store for rank: 1
+[1,3]<stderr>:INFO:root:Added key: store_based_barrier_key:8 to store for rank: 3
+[1,0]<stderr>:INFO:root:Added key: store_based_barrier_key:8 to store for rank: 0
+[1,2]<stderr>:INFO:root:Added key: store_based_barrier_key:8 to store for rank: 2
+[1,2]<stderr>:INFO:root:Added key: store_based_barrier_key:9 to store for rank: 2
+[1,1]<stderr>:INFO:root:Added key: store_based_barrier_key:9 to store for rank: 1
+[1,3]<stderr>:INFO:root:Added key: store_based_barrier_key:9 to store for rank: 3
+[1,0]<stderr>:INFO:root:Added key: store_based_barrier_key:9 to store for rank: 0
+[1,0]<stderr>:INFO:root:Added key: store_based_barrier_key:10 to store for rank: 0
+[1,3]<stderr>:INFO:root:Added key: store_based_barrier_key:10 to store for rank: 3
+[1,2]<stderr>:INFO:root:Added key: store_based_barrier_key:10 to store for rank: 2
+[1,1]<stderr>:INFO:root:Added key: store_based_barrier_key:10 to store for rank: 1
+[1,1]<stderr>:INFO:root:Added key: store_based_barrier_key:11 to store for rank: 1
+[1,0]<stderr>:INFO:root:Added key: store_based_barrier_key:11 to store for rank: 0
+[1,3]<stderr>:INFO:root:Added key: store_based_barrier_key:11 to store for rank: 3
+[1,2]<stderr>:INFO:root:Added key: store_based_barrier_key:11 to store for rank: 2
+[1,2]<stderr>:INFO:root:Added key: store_based_barrier_key:12 to store for rank: 2
+[1,1]<stderr>:INFO:root:Added key: store_based_barrier_key:12 to store for rank: 1
+[1,0]<stderr>:INFO:root:Added key: store_based_barrier_key:12 to store for rank: 0
+[1,3]<stderr>:INFO:root:Added key: store_based_barrier_key:12 to store for rank: 3
+[1,0]<stderr>:INFO:root:Added key: store_based_barrier_key:13 to store for rank: 0
+[1,3]<stderr>:INFO:root:Added key: store_based_barrier_key:13 to store for rank: 3
+[1,2]<stderr>:INFO:root:Added key: store_based_barrier_key:13 to store for rank: 2
+[1,1]<stderr>:INFO:root:Added key: store_based_barrier_key:13 to store for rank: 1
+[1,1]<stderr>:INFO:root:Added key: store_based_barrier_key:14 to store for rank: 1
+[1,1]<stderr>:Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+[1,1]<stderr>:You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[1,0]<stderr>:INFO:root:Added key: store_based_barrier_key:14 to store for rank: 0
+[1,3]<stderr>:INFO:root:Added key: store_based_barrier_key:14 to store for rank: 3
+[1,2]<stderr>:INFO:root:Added key: store_based_barrier_key:14 to store for rank: 2
+[1,2]<stderr>:wandb: Currently logged in as: jamie-brandon (use `wandb login --relogin` to force relogin)
+[1,0]<stderr>:wandb: Currently logged in as: jamie-brandon (use `wandb login --relogin` to force relogin)
+[1,1]<stderr>:wandb: Currently logged in as: jamie-brandon (use `wandb login --relogin` to force relogin)
+[1,3]<stderr>:wandb: Currently logged in as: jamie-brandon (use `wandb login --relogin` to force relogin)
+[1,2]<stderr>:Thread WriterThread:
+[1,2]<stderr>:Traceback (most recent call last):
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/internal_util.py", line 52, in run
+[1,2]<stderr>:    self._run()
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/internal_util.py", line 102, in _run
+[1,2]<stderr>:    self._process(record)
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/internal.py", line 331, in _process
+[1,2]<stderr>:    self._wm.write(record)
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/writer.py", line 30, in write
+[1,2]<stderr>:    self.open()
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/writer.py", line 26, in open
+[1,2]<stderr>:    self._ds.open_for_write(self._settings.sync_file)
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/datastore.py", line 79, in open_for_write
+[1,2]<stderr>:    self._fp = open(fname, open_flags)
+[1,2]<stderr>:FileExistsError: [Errno 17] File exists: '/opt/ml/code/wandb/run-20211016_152038-debug-wandb-sagemaker-distributed-train-2021-10-16-15-13-26-679-algo-1/run-debug-wandb-sagemaker-distributed-train-2021-10-16-15-13-26-679-algo-1.wandb'
+[1,0]<stderr>:Thread WriterThread:
+[1,0]<stderr>:Traceback (most recent call last):
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/internal_util.py", line 52, in run
+[1,0]<stderr>:    self._run()
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/internal_util.py", line 102, in _run
+[1,0]<stderr>:    self._process(record)
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/internal.py", line 331, in _process
+[1,0]<stderr>:    self._wm.write(record)
+[1,2]<stderr>:Traceback (most recent call last):
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 808, in init
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/writer.py", line 30, in write
+[1,0]<stderr>:    self.open()
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/writer.py", line 26, in open
+[1,0]<stderr>:    self._ds.open_for_write(self._settings.sync_file)
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/datastore.py", line 79, in open_for_write
+[1,0]<stderr>:    self._fp = open(fname, open_flags)
+[1,0]<stderr>:FileExistsError: [Errno 17] File exists: '/opt/ml/code/wandb/run-20211016_152038-debug-wandb-sagemaker-distributed-train-2021-10-16-15-13-26-679-algo-1/run-debug-wandb-sagemaker-distributed-train-2021-10-16-15-13-26-679-algo-1.wandb'
+[1,3]<stderr>:Thread WriterThread:
+[1,3]<stderr>:Traceback (most recent call last):
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/internal_util.py", line 52, in run
+[1,3]<stderr>:    self._run()
+[1,2]<stderr>:    run = wi.init()
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 553, in init
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/internal_util.py", line 102, in _run
+[1,3]<stderr>:    self._process(record)
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/internal.py", line 331, in _process
+[1,3]<stderr>:    self._wm.write(record)
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/writer.py", line 30, in write
+[1,3]<stderr>:    self.open()
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/writer.py", line 26, in open
+[1,3]<stderr>:    self._ds.open_for_write(self._settings.sync_file)
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/internal/datastore.py", line 79, in open_for_write
+[1,3]<stderr>:    self._fp = open(fname, open_flags)
+[1,3]<stderr>:FileExistsError: [Errno 17] File exists: '/opt/ml/code/wandb/run-20211016_152038-debug-wandb-sagemaker-distributed-train-2021-10-16-15-13-26-679-algo-1/run-debug-wandb-sagemaker-distributed-train-2021-10-16-15-13-26-679-algo-1.wandb'
+[1,1]<stderr>:
+[1,2]<stderr>:    backend.cleanup()
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/backend/backend.py", line 167, in cleanup
+[1,2]<stderr>:    self.interface.join()
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 830, in join
+[1,2]<stderr>:    _ = self._communicate(record)
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 539, in _communicate
+[1,2]<stderr>:    return self._communicate_async(rec, local=local).get(timeout=timeout)
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 544, in _communicate_async
+[1,2]<stderr>:    raise Exception("The wandb backend process has shutdown")
+[1,2]<stderr>:Exception: The wandb backend process has shutdown
+[1,1]<stderr>:CondaEnvException: Unable to determine environment
+[1,1]<stderr>:
+[1,1]<stderr>:Please re-run this command with one of the following options:
+[1,1]<stderr>:
+[1,1]<stderr>:* Provide an environment name via --name or -n
+[1,1]<stderr>:* Re-run this command inside an activated conda environment.
+[1,1]<stderr>:
+[1,1]<stderr>:wandb: Tracking run with wandb version 0.12.4
+[1,1]<stderr>:wandb: Syncing run debug-wandb-sagemaker-distributed-train-2021-10-16-15-13-26-679-algo-1
+[1,1]<stderr>:wandb: â­ï¸ View project at https://wandb.ai/jamie-brandon/wandb-sagemaker-distributed-bug
+[1,0]<stderr>:Traceback (most recent call last):
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 808, in init
+[1,0]<stderr>:    run = wi.init()
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 553, in init
+[1,0]<stderr>:    backend.cleanup()
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/backend/backend.py", line 167, in cleanup
+[1,0]<stderr>:    self.interface.join()
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 830, in join
+[1,0]<stderr>:    _ = self._communicate(record)
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 539, in _communicate
+[1,1]<stderr>:wandb: ð View run at https://wandb.ai/jamie-brandon/wandb-sagemaker-distributed-bug/runs/debug-wandb-sagemaker-distributed-train-2021-10-16-15-13-26-679-algo-1
+[1,1]<stderr>:wandb: Run data is saved locally in /opt/ml/code/wandb/run-20211016_152038-debug-wandb-sagemaker-distributed-train-2021-10-16-15-13-26-679-algo-1
+[1,1]<stderr>:wandb: Run `wandb offline` to turn off syncing.
+[1,1]<stderr>:INFO:filelock:Lock 140471948870712 acquired on /root/.cache/huggingface/transformers/3c61d016573b14f7f008c02c4e51a366c67ab274726fe2910691e2a761acf43e.37395cee442ab11005bcd270f3c34464dc1704b715b5d7d52b1a461abe3b9e4e.lock
+[1,1]<stderr>:#015Downloading:   0%|          | 0.00/570 [00:00<?, ?B/s][1,1]<stderr>:#015Downloading: 100%|ââââââââââ| 570/570 [00:00<00:00, 877kB/s][1,1]<stderr>:
+[1,1]<stderr>:INFO:filelock:Lock 140471948870712 released on /root/.cache/huggingface/transformers/3c61d016573b14f7f008c02c4e51a366c67ab274726fe2910691e2a761acf43e.37395cee442ab11005bcd270f3c34464dc1704b715b5d7d52b1a461abe3b9e4e.lock
+[1,1]<stderr>:INFO:filelock:Lock 140471942280584 acquired on /root/.cache/huggingface/transformers/45c3f7a79a80e1cf0a489e5c62b43f173c15db47864303a55d623bb3c96f72a5.d789d64ebfe299b0e416afc4a169632f903f693095b4629a7ea271d5a0cf2c99.lock
+[1,1]<stderr>:#015Downloading:   0%|          | 0.00/232k [00:00<?, ?B/s][1,1]<stderr>:#015Downloading:  39%|ââââ      | 90.1k/232k [00:00<00:00, 506kB/s][1,2]<stderr>:wandb: ERROR Internal wandb error: file data was not synced
+[1,0]<stderr>:wandb: ERROR Internal wandb error: file data was not synced
+[1,3]<stderr>:wandb: ERROR Internal wandb error: file data was not synced
+[1,1]<stderr>:#015Downloading: 100%|ââââââââââ| 232k/232k [00:00<00:00, 862kB/s]
+[1,0]<stderr>:    return self._communicate_async(rec, local=local).get(timeout=timeout)
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 544, in _communicate_async
+[1,0]<stderr>:    raise Exception("The wandb backend process has shutdown")
+[1,0]<stderr>:Exception: The wandb backend process has shutdown
+[1,3]<stderr>:Traceback (most recent call last):
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 808, in init
+[1,3]<stderr>:    run = wi.init()
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 553, in init
+[1,3]<stderr>:    backend.cleanup()
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/backend/backend.py", line 167, in cleanup
+[1,3]<stderr>:    self.interface.join()
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 830, in join
+[1,3]<stderr>:    _ = self._communicate(record)
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 539, in _communicate
+[1,3]<stderr>:    return self._communicate_async(rec, local=local).get(timeout=timeout)
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 544, in _communicate_async
+[1,3]<stderr>:    raise Exception("The wandb backend process has shutdown")
+[1,3]<stderr>:Exception: The wandb backend process has shutdown
+[1,2]<stderr>:wandb: ERROR Abnormal program exit
+[1,2]<stderr>:Traceback (most recent call last):
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 808, in init
+[1,2]<stderr>:    run = wi.init()
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 553, in init
+[1,2]<stderr>:    backend.cleanup()
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/backend/backend.py", line 167, in cleanup
+[1,2]<stderr>:    self.interface.join()
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 830, in join
+[1,2]<stderr>:    _ = self._communicate(record)
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 539, in _communicate
+[1,2]<stderr>:    return self._communicate_async(rec, local=local).get(timeout=timeout)
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 544, in _communicate_async
+[1,2]<stderr>:    raise Exception("The wandb backend process has shutdown")
+[1,2]<stderr>:Exception: The wandb backend process has shutdown
+[1,2]<stderr>:
+[1,2]<stderr>:The above exception was the direct cause of the following exception:
+[1,2]<stderr>:
+[1,2]<stderr>:Traceback (most recent call last):
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+[1,2]<stderr>:    "__main__", mod_spec)
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 85, in _run_code
+[1,2]<stderr>:    exec(code, run_globals)
+[1,1]<stderr>:INFO:filelock:Lock 140471942280584 released on /root/.cache/huggingface/transformers/45c3f7a79a80e1cf0a489e5c62b43f173c15db47864303a55d623bb3c96f72a5.d789d64ebfe299b0e416afc4a169632f903f693095b4629a7ea271d5a0cf2c99.lock
+[1,1]<stderr>:INFO:filelock:Lock 140471942112928 acquired on /root/.cache/huggingface/transformers/534479488c54aeaf9c3406f647aa2ec13648c06771ffe269edabebd4c412da1d.7f2721073f19841be16f41b0a70b600ca6b880c8f3df6f3535cbc704371bdfa4.lock
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/mpi4py/__main__.py", line 7, in <module>
+[1,2]<stderr>:    main()
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/mpi4py/run.py", line 196, in main
+[1,2]<stderr>:    run_command_line(args)
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/mpi4py/run.py", line 47, in run_command_line
+[1,2]<stderr>:    run_path(sys.argv[0], run_name='__main__')
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 263, in run_path
+[1,2]<stderr>:    pkg_name=pkg_name, script_name=fname)
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 96, in _run_module_code
+[1,1]<stderr>:#015Downloading:   0%|          | 0.00/466k [00:00<?, ?B/s][1,1]<stderr>:#015Downloading:   6%|â         | 28.7k/466k [00:00<00:02, 161kB/s][1,1]<stderr>:#015Downloading:  40%|ââââ      | 184k/466k [00:00<00:01, 217kB/s] [1,1]<stderr>:#015Downloading:  85%|âââââââââ | 397k/466k [00:00<00:00, 293kB/s][1,1]<stderr>:#015Downloading: 100%|ââââââââââ| 466k/466k [00:00<00:00, 1.04MB/s][1,1]<stderr>:
+[1,1]<stderr>:INFO:filelock:Lock 140471942112928 released on /root/.cache/huggingface/transformers/534479488c54aeaf9c3406f647aa2ec13648c06771ffe269edabebd4c412da1d.7f2721073f19841be16f41b0a70b600ca6b880c8f3df6f3535cbc704371bdfa4.lock
+[1,1]<stderr>:INFO:filelock:Lock 140471939623176 acquired on /root/.cache/huggingface/transformers/c1d7f0a763fb63861cc08553866f1fc3e5a6f4f07621be277452d26d71303b7e.20430bd8e10ef77a7d2977accefe796051e01bc2fc4aa146bc862997a1a15e79.lock
+[1,1]<stderr>:#015Downloading:   0%|          | 0.00/28.0 [00:00<?, ?B/s][1,1]<stderr>:#015Downloading: 100%|ââââââââââ| 28.0/28.0 [00:00<00:00, 52.8kB/s][1,1]<stderr>:
+[1,1]<stderr>:INFO:filelock:Lock 140471939623176 released on /root/.cache/huggingface/transformers/c1d7f0a763fb63861cc08553866f1fc3e5a6f4f07621be277452d26d71303b7e.20430bd8e10ef77a7d2977accefe796051e01bc2fc4aa146bc862997a1a15e79.lock
+[1,1]<stderr>:INFO:__main__: loaded train dataset length is: 8
+[1,1]<stderr>:INFO:__main__: loaded val dataset length is: 2
+[1,1]<stderr>:INFO:__main__: loaded test dataset length is: 2
+[1,1]<stderr>:INFO:filelock:Lock 140471938876920 acquired on /root/.cache/huggingface/transformers/a8041bf617d7f94ea26d15e218abd04afc2004805632abc0ed2066aa16d50d04.faf6ea826ae9c5867d12b22257f9877e6b8367890837bd60f7c54a29633f7f2f.lock
+[1,2]<stderr>:    mod_name, mod_spec, pkg_name, script_name)
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 85, in _run_code
+[1,1]<stderr>:#015Downloading:   0%|          | 0.00/440M [00:00<?, ?B/s][1,1]<stderr>:#015Downloading:   1%|          | 4.68M/440M [00:00<00:09, 46.3MB/s][1,1]<stderr>:#015Downloading:   2%|â         | 8.68M/440M [00:00<00:09, 44.2MB/s][1,1]<stderr>:#015Downloading:   4%|â         | 16.3M/440M [00:00<00:08, 50.6MB/s][1,1]<stderr>:#015Downloading:   6%|â         | 24.4M/440M [00:00<00:07, 57.1MB/s][1,1]<stderr>:#015Downloading:   7%|â         | 31.3M/440M [00:00<00:06, 59.6MB/s][1,1]<stderr>:#015Downloading:   9%|â         | 38.7M/440M [00:00<00:06, 63.4MB/s][1,1]<stderr>:#015Downloading:  11%|â         | 46.8M/440M [00:00<00:05, 67.7MB/s][1,1]<stderr>:#015Downloading:  12%|ââ        | 55.0M/440M [00:00<00:05, 71.5MB/s][1,1]<stderr>:#015Downloading:  14%|ââ        | 63.0M/440M [00:00<00:05, 73.9MB/s][1,1]<stderr>:#015Downloading:  16%|ââ        | 71.1M/440M [00:01<00:04, 76.0MB/s][1,1]<stderr>:#015Downloading:  18%|ââ        | 79.2M/440M [00:01<00:04, 77.4MB/s][1,1]<stderr>:#015Downloading:  20%|ââ        | 87.0M/440M [00:01<00:04, 74.2MB/s][1,1]<stderr>:#015Downloading:  21%|âââ       | 94.5M/440M [00:01<00:04, 72.3MB/s][1,1]<stderr>:#015Downloading:  23%|âââ       | 102M/440M [00:01<00:04, 72.2MB/s] [1,1]<stderr>:#015Downloading:  25%|âââ       | 109M/440M [00:01<00:04, 72.0MB/s][1,1]<stderr>:#015Downloading:  26%|âââ       | 116M/440M [00:01<00:04, 72.0MB/s][1,1]<stderr>:#015Downloading:  28%|âââ       | 123M/440M [00:01<00:04, 71.6MB/s][1,1]<stderr>:#015Downloading:  30%|âââ       | 131M/440M [00:01<00:04, 71.4MB/s][1,1]<stderr>:#015Downloading:  32%|ââââ      | 139M/440M [00:01<00:04, 74.3MB/s][1,1]<stderr>:#015Downloading:  33%|ââââ      | 147M/440M [00:02<00:03, 76.3MB/s][1,1]<stderr>:#015Downloading:  35%|ââââ      | 155M/440M [00:02<00:03, 77.7MB/s][1,1]<stderr>:#015Downloading:  37%|ââââ      | 163M/440M [00:02<00:03, 73.1MB/s][1,1]<stderr>:#015Downloading:  39%|ââââ      | 171M/440M [00:02<00:03, 75.1MB/s][1,1]<stderr>:#015Downloading:  41%|ââââ      | 179M/440M [00:02<00:03, 76.6MB/s][1,1]<stderr>:#015Downloading:  42%|âââââ     | 187M/440M [00:02<00:03, 76.1MB/s][1,1]<stderr>:#015Downloading:  44%|âââââ     | 195M/440M [00:02<00:03, 77.4MB/s][1,1]<stderr>:#015Downloading:  46%|âââââ     | 203M/440M [00:02<00:03, 77.8MB/s][1,1]<stderr>:#015Downloading:  48%|âââââ     | 211M/440M [00:02<00:02, 78.4MB/s][1,1]<stderr>:#015Downloading:  50%|âââââ     | 219M/440M [00:02<00:02, 79.0MB/s][1,1]<stderr>:#015Downloading:  51%|ââââââ    | 227M/440M [00:03<00:02, 79.7MB/s][1,1]<stderr>:#015Downloading:  53%|ââââââ    | 235M/440M [00:03<00:02, 78.1MB/s][1,1]<stderr>:#015Downloading:  55%|ââââââ    | 243M/440M [00:03<00:02, 75.3MB/s][1,1]<stderr>:#015Downloading:  57%|ââââââ    | 250M/440M [00:03<00:02, 75.8MB/s][1,1]<stderr>:#015Downloading:  59%|ââââââ    | 258M/440M [00:03<00:02, 69.6MB/s][1,1]<stderr>:#015Downloading:  60%|ââââââ    | 265M/440M [00:03<00:02, 70.2MB/s][1,1]<stderr>:#015Downloading:  62%|âââââââ   | 273M/440M [00:03<00:02, 73.1MB/s][1,1]<stderr>:#015Downloading:  64%|âââââââ   | 281M/440M [00:03<00:02, 74.1MB/s][1,1]<stderr>:#015Downloading:  66%|âââââââ   | 289M/440M [00:03<00:02, 75.5MB/s][1,1]<stderr>:#015Downloading:  67%|âââââââ   | 296M/440M [00:04<00:02, 69.1MB/s][1,1]<stderr>:#015Downloading:  69%|âââââââ   | 304M/440M [00:04<00:01, 70.3MB/s][1,1]<stderr>:#015Downloading:  71%|âââââââ   | 312M/440M [00:04<00:01, 72.9MB/s][1,1]<stderr>:#015Downloading:  72%|ââââââââ  | 319M/440M [00:04<00:01, 67.1MB/s][1,1]<stderr>:#015Downloading:  74%|ââââââââ  | 327M/440M [00:04<00:01, 69.2MB/s][1,1]<stderr>:#015Downloading:  76%|ââââââââ  | 334M/440M [00:04<00:01, 70.5MB/s][1,1]<stderr>:#015Downloading:  78%|ââââââââ  | 342M/440M [00:04<00:01, 73.1MB/s][1,1]<stderr>:#015Downloading:  79%|ââââââââ  | 350M/440M [00:04<00:01, 75.2MB/s][1,1]<stderr>:#015Downloading:  81%|ââââââââ  | 358M/440M [00:04<00:01, 76.4MB/s][1,1]<stderr>:#015Downloading:  83%|âââââââââ | 366M/440M [00:04<00:00, 77.2MB/s][1,1]<stderr>:#015Downloading:  85%|âââââââââ | 374M/440M [00:05<00:00, 78.0MB/s][1,1]<stderr>:#015Downloading:  87%|âââââââââ | 382M/440M [00:05<00:00, 77.3MB/s][1,1]<stderr>:#015Downloading:  88%|âââââââââ | 389M/440M [00:05<00:00, 76.8MB/s][1,1]<stderr>:#015Downloading:  90%|âââââââââ | 397M/440M [00:05<00:00, 68.4MB/s][1,1]<stderr>:#015Downloading:  92%|ââââââââââ| 404M/440M [00:05<00:00, 68.6MB/s][1,1]<stderr>:#015Downloading:  94%|ââââââââââ| 412M/440M [00:05<00:00, 71.3MB/s][1,1]<stderr>:#015Downloading:  95%|ââââââââââ| 420M/440M [00:05<00:00, 73.7MB/s][1,1]<stderr>:#015Downloading:  97%|ââââââââââ| 428M/440M [00:05<00:00, 75.0MB/s][1,1]<stderr>:#015Downloading:  99%|ââââââââââ| 435M/440M [00:05<00:00, 74.9MB/s][1,1]<stderr>:#015Downloading: 100%|ââââââââââ| 440M/440M [00:05<00:00, 73.5MB/s]
+[1,1]<stderr>:INFO:filelock:Lock 140471938876920 released on /root/.cache/huggingface/transformers/a8041bf617d7f94ea26d15e218abd04afc2004805632abc0ed2066aa16d50d04.faf6ea826ae9c5867d12b22257f9877e6b8367890837bd60f7c54a29633f7f2f.lock
+[1,1]<stderr>:Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertForSequenceClassification: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.weight', 'cls.predictions.decoder.weight']
+[1,1]<stderr>:- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+[1,1]<stderr>:- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).[1,1]<stderr>:
+[1,1]<stderr>:Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+[1,1]<stderr>:You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[1,2]<stderr>:Traceback (most recent call last):
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 808, in init
+[1,2]<stderr>:    run = wi.init()
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 553, in init
+[1,2]<stderr>:    backend.cleanup()
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/backend/backend.py", line 167, in cleanup
+[1,2]<stderr>:    self.interface.join()
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 830, in join
+[1,2]<stderr>:    _ = self._communicate(record)
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 539, in _communicate
+[1,2]<stderr>:    return self._communicate_async(rec, local=local).get(timeout=timeout)
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 544, in _communicate_async
+[1,2]<stderr>:    raise Exception("The wandb backend process has shutdown")
+[1,2]<stderr>:Exception: The wandb backend process has shutdown
+[1,0]<stderr>:Traceback (most recent call last):
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 808, in init
+[1,0]<stderr>:    run = wi.init()
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 553, in init
+[1,0]<stderr>:    backend.cleanup()
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/backend/backend.py", line 167, in cleanup
+[1,0]<stderr>:    self.interface.join()
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 830, in join
+[1,0]<stderr>:    _ = self._communicate(record)
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 539, in _communicate
+[1,0]<stderr>:    return self._communicate_async(rec, local=local).get(timeout=timeout)
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 544, in _communicate_async
+[1,0]<stderr>:    raise Exception("The wandb backend process has shutdown")
+[1,0]<stderr>:Exception: The wandb backend process has shutdown
+[1,3]<stderr>:Traceback (most recent call last):
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 808, in init
+[1,3]<stderr>:    run = wi.init()
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 553, in init
+[1,3]<stderr>:    backend.cleanup()
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/backend/backend.py", line 167, in cleanup
+[1,3]<stderr>:    self.interface.join()
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 830, in join
+[1,3]<stderr>:    _ = self._communicate(record)
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 539, in _communicate
+[1,3]<stderr>:    return self._communicate_async(rec, local=local).get(timeout=timeout)
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 544, in _communicate_async
+[1,3]<stderr>:    raise Exception("The wandb backend process has shutdown")
+[1,3]<stderr>:Exception: The wandb backend process has shutdown
+[1,2]<stderr>:wandb: ERROR Abnormal program exit
+[1,2]<stderr>:Traceback (most recent call last):
+[1,2]<stderr>:    exec(code, run_globals)
+[1,2]<stderr>:  File "train.py", line 75, in <module>
+[1,2]<stderr>:    group="DDP",
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 846, in init
+[1,2]<stderr>:    six.raise_from(Exception("problem"), error_seen)
+[1,2]<stderr>:  File "<string>", line 3, in raise_from
+[1,2]<stderr>:Exception: problem
+[1,0]<stderr>:wandb: ERROR Abnormal program exit
+[1,0]<stderr>:Traceback (most recent call last):
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 808, in init
+[1,0]<stderr>:    run = wi.init()
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 553, in init
+[1,0]<stderr>:    backend.cleanup()
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/backend/backend.py", line 167, in cleanup
+[1,0]<stderr>:    self.interface.join()
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 830, in join
+[1,0]<stderr>:    _ = self._communicate(record)
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 539, in _communicate
+[1,0]<stderr>:    return self._communicate_async(rec, local=local).get(timeout=timeout)
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 544, in _communicate_async
+[1,0]<stderr>:    raise Exception("The wandb backend process has shutdown")
+[1,0]<stderr>:Exception: The wandb backend process has shutdown
+[1,0]<stderr>:
+[1,0]<stderr>:The above exception was the direct cause of the following exception:
+[1,0]<stderr>:
+[1,0]<stderr>:Traceback (most recent call last):
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+[1,0]<stderr>:    "__main__", mod_spec)
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 85, in _run_code
+[1,0]<stderr>:    exec(code, run_globals)
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/mpi4py/__main__.py", line 7, in <module>
+[1,0]<stderr>:    main()
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 808, in init
+[1,2]<stderr>:    run = wi.init()
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 553, in init
+[1,2]<stderr>:    backend.cleanup()
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/backend/backend.py", line 167, in cleanup
+[1,2]<stderr>:    self.interface.join()
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 830, in join
+[1,2]<stderr>:    _ = self._communicate(record)
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 539, in _communicate
+[1,2]<stderr>:    return self._communicate_async(rec, local=local).get(timeout=timeout)
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 544, in _communicate_async
+[1,2]<stderr>:    raise Exception("The wandb backend process has shutdown")
+[1,2]<stderr>:Exception: The wandb backend process has shutdown
+[1,2]<stderr>:
+[1,2]<stderr>:The above exception was the direct cause of the following exception:
+[1,2]<stderr>:
+[1,2]<stderr>:Traceback (most recent call last):
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+[1,2]<stderr>:    "__main__", mod_spec)
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 85, in _run_code
+[1,2]<stderr>:    exec(code, run_globals)
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/mpi4py/__main__.py", line 7, in <module>
+[1,2]<stderr>:    main()
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/mpi4py/run.py", line 196, in main
+[1,2]<stderr>:    run_command_line(args)
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/mpi4py/run.py", line 47, in run_command_line
+[1,2]<stderr>:    run_path(sys.argv[0], run_name='__main__')
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 263, in run_path
+[1,2]<stderr>:    pkg_name=pkg_name, script_name=fname)
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 96, in _run_module_code
+[1,2]<stderr>:    mod_name, mod_spec, pkg_name, script_name)
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 85, in _run_code
+[1,2]<stderr>:    exec(code, run_globals)
+[1,2]<stderr>:  File "train.py", line 75, in <module>
+[1,2]<stderr>:    group="DDP",
+[1,2]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 846, in init
+[1,2]<stderr>:    six.raise_from(Exception("problem"), error_seen)
+[1,2]<stderr>:  File "<string>", line 3, in raise_from
+[1,2]<stderr>:Exception: problem
+[1,0]<stderr>:wandb: ERROR Abnormal program exit
+[1,0]<stderr>:Traceback (most recent call last):
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 808, in init
+[1,0]<stderr>:    run = wi.init()
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 553, in init
+[1,0]<stderr>:    backend.cleanup()
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/backend/backend.py", line 167, in cleanup
+[1,0]<stderr>:    self.interface.join()
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 830, in join
+[1,0]<stderr>:    _ = self._communicate(record)
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 539, in _communicate
+[1,0]<stderr>:    return self._communicate_async(rec, local=local).get(timeout=timeout)
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 544, in _communicate_async
+[1,0]<stderr>:    raise Exception("The wandb backend process has shutdown")
+[1,0]<stderr>:Exception: The wandb backend process has shutdown
+[1,0]<stderr>:
+[1,0]<stderr>:The above exception was the direct cause of the following exception:
+[1,0]<stderr>:
+[1,0]<stderr>:Traceback (most recent call last):
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+[1,0]<stderr>:    "__main__", mod_spec)
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/mpi4py/run.py", line 196, in main
+[1,0]<stderr>:    run_command_line(args)
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/mpi4py/run.py", line 47, in run_command_line
+[1,0]<stderr>:    run_path(sys.argv[0], run_name='__main__')
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 263, in run_path
+[1,0]<stderr>:    pkg_name=pkg_name, script_name=fname)
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 96, in _run_module_code
+[1,0]<stderr>:    mod_name, mod_spec, pkg_name, script_name)
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 85, in _run_code
+[1,0]<stderr>:    exec(code, run_globals)
+[1,0]<stderr>:  File "train.py", line 75, in <module>
+[1,0]<stderr>:    group="DDP",
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 85, in _run_code
+[1,0]<stderr>:    exec(code, run_globals)
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/mpi4py/__main__.py", line 7, in <module>
+[1,0]<stderr>:    main()
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/mpi4py/run.py", line 196, in main
+[1,0]<stderr>:    run_command_line(args)
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/mpi4py/run.py", line 47, in run_command_line
+[1,0]<stderr>:    run_path(sys.argv[0], run_name='__main__')
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 263, in run_path
+[1,0]<stderr>:    pkg_name=pkg_name, script_name=fname)
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 96, in _run_module_code
+[1,0]<stderr>:    mod_name, mod_spec, pkg_name, script_name)
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 85, in _run_code
+[1,0]<stderr>:    exec(code, run_globals)
+[1,0]<stderr>:  File "train.py", line 75, in <module>
+[1,0]<stderr>:    group="DDP",
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 846, in init
+[1,0]<stderr>:    six.raise_from(Exception("problem"), error_seen)
+[1,0]<stderr>:  File "<string>", line 3, in raise_from
+[1,0]<stderr>:Exception: problem
+[1,3]<stderr>:wandb: ERROR Abnormal program exit
+[1,3]<stderr>:Traceback (most recent call last):
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 808, in init
+[1,3]<stderr>:    run = wi.init()
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 553, in init
+[1,3]<stderr>:    backend.cleanup()
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/backend/backend.py", line 167, in cleanup
+[1,3]<stderr>:    self.interface.join()
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 830, in join
+[1,3]<stderr>:    _ = self._communicate(record)
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 539, in _communicate
+[1,3]<stderr>:    return self._communicate_async(rec, local=local).get(timeout=timeout)
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 544, in _communicate_async
+[1,3]<stderr>:    raise Exception("The wandb backend process has shutdown")
+[1,3]<stderr>:Exception: The wandb backend process has shutdown
+[1,3]<stderr>:
+[1,3]<stderr>:The above exception was the direct cause of the following exception:
+[1,3]<stderr>:
+[1,3]<stderr>:Traceback (most recent call last):
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+[1,3]<stderr>:    "__main__", mod_spec)
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 85, in _run_code
+[1,3]<stderr>:    exec(code, run_globals)
+[1,0]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 846, in init
+[1,0]<stderr>:    six.raise_from(Exception("problem"), error_seen)
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/mpi4py/__main__.py", line 7, in <module>
+[1,3]<stderr>:    main()
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/mpi4py/run.py", line 196, in main
+[1,3]<stderr>:    run_command_line(args)
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/mpi4py/run.py", line 47, in run_command_line
+[1,3]<stderr>:    run_path(sys.argv[0], run_name='__main__')
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 263, in run_path
+[1,3]<stderr>:    pkg_name=pkg_name, script_name=fname)
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 96, in _run_module_code
+[1,3]<stderr>:    mod_name, mod_spec, pkg_name, script_name)
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 85, in _run_code
+[1,3]<stderr>:    exec(code, run_globals)
+[1,3]<stderr>:  File "train.py", line 75, in <module>
+[1,3]<stderr>:    group="DDP",
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 846, in init
+[1,3]<stderr>:    six.raise_from(Exception("problem"), error_seen)
+[1,3]<stderr>:  File "<string>", line 3, in raise_from
+[1,3]<stderr>:Exception: problem
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+[1,0]<stderr>:  File "<string>", line 3, in raise_from
+[1,0]<stderr>:Exception: problem
+[1,3]<stderr>:wandb: ERROR Abnormal program exit
+[1,3]<stderr>:Traceback (most recent call last):
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 808, in init
+[1,3]<stderr>:    run = wi.init()
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 553, in init
+[1,3]<stderr>:    backend.cleanup()
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/backend/backend.py", line 167, in cleanup
+[1,3]<stderr>:    self.interface.join()
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 830, in join
+[1,3]<stderr>:    _ = self._communicate(record)
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 539, in _communicate
+[1,3]<stderr>:    return self._communicate_async(rec, local=local).get(timeout=timeout)
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 544, in _communicate_async
+[1,3]<stderr>:    raise Exception("The wandb backend process has shutdown")
+[1,3]<stderr>:Exception: The wandb backend process has shutdown
+[1,3]<stderr>:
+[1,3]<stderr>:The above exception was the direct cause of the following exception:
+[1,3]<stderr>:
+[1,3]<stderr>:Traceback (most recent call last):
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+[1,3]<stderr>:    "__main__", mod_spec)
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 85, in _run_code
+[1,3]<stderr>:    exec(code, run_globals)
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/mpi4py/__main__.py", line 7, in <module>
+[1,3]<stderr>:    main()
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/mpi4py/run.py", line 196, in main
+[1,3]<stderr>:    run_command_line(args)
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/mpi4py/run.py", line 47, in run_command_line
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun.real detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[41137,1],3]
+  Exit code:    1
+--------------------------------------------------------------------------
+[1,3]<stderr>:    run_path(sys.argv[0], run_name='__main__')
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 263, in run_path
+[1,3]<stderr>:    pkg_name=pkg_name, script_name=fname)
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 96, in _run_module_code
+[1,3]<stderr>:    mod_name, mod_spec, pkg_name, script_name)
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/runpy.py", line 85, in _run_code
+[1,3]<stderr>:    exec(code, run_globals)
+[1,3]<stderr>:  File "train.py", line 75, in <module>
+[1,3]<stderr>:    group="DDP",
+[1,3]<stderr>:  File "/opt/conda/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 846, in init
+[1,3]<stderr>:    six.raise_from(Exception("problem"), error_seen)
+[1,3]<stderr>:  File "<string>", line 3, in raise_from
+[1,3]<stderr>:Exception: problem
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun.real detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[41137,1],3]
+  Exit code:    1
+--------------------------------------------------------------------------
+
+
+2021-10-16 15:21:18 Uploading - Uploading generated training model
+2021-10-16 15:21:18 Failed - Training job failed
+Traceback (most recent call last):
+  File "/Users/jamie.brandon/code/wandb-sagemaker-issue/train_sagemaker.py", line 92, in <module>
+    huggingface_estimator.fit()
+  File "/Users/jamie.brandon/code/wandb-sagemaker-issue/venv_wandb_sagemaker_issue/lib/python3.9/site-packages/sagemaker/estimator.py", line 693, in fit
+    self.latest_training_job.wait(logs=logs)
+  File "/Users/jamie.brandon/code/wandb-sagemaker-issue/venv_wandb_sagemaker_issue/lib/python3.9/site-packages/sagemaker/estimator.py", line 1653, in wait
+    self.sagemaker_session.logs_for_job(self.job_name, wait=True, log_type=logs)
+  File "/Users/jamie.brandon/code/wandb-sagemaker-issue/venv_wandb_sagemaker_issue/lib/python3.9/site-packages/sagemaker/session.py", line 3724, in logs_for_job
+    self._check_job_status(job_name, description, "TrainingJobStatus")
+  File "/Users/jamie.brandon/code/wandb-sagemaker-issue/venv_wandb_sagemaker_issue/lib/python3.9/site-packages/sagemaker/session.py", line 3279, in _check_job_status
+    raise exceptions.UnexpectedStatusException(
+sagemaker.exceptions.UnexpectedStatusException: Error for Training job debug-wandb-sagemaker-distributed-train-2021-10-16-15-13-26-679: Failed. Reason: AlgorithmError: ExecuteUserScriptError:
+Command "mpirun --host algo-1:4 -np 4 --allow-run-as-root --display-map --tag-output -mca btl_tcp_if_include eth0 -mca oob_tcp_if_include eth0 -mca plm_rsh_no_tree_spawn 1 -bind-to none -map-by slot -mca pml ob1 -mca btl ^openib -mca orte_abort_on_non_zero_status 1 -mca btl_vader_single_copy_mechanism none -x NCCL_MIN_NRINGS=4 -x NCCL_SOCKET_IFNAME=eth0 -x NCCL_DEBUG=INFO -x LD_LIBRARY_PATH -x PATH -x LD_PRELOAD=/opt/conda/lib/python3.6/site-packages/gethostname.cpython-36m-x86_64-linux-gnu.so -x SM_HOSTS -x SM_NETWORK_INTERFACE_NAME -x SM_HPS -x SM_USER_ENTRY_POINT -x SM_FRAMEWORK_PARAMS -x SM_RESOURCE_CONFIG -x SM_INPUT_DATA_CONFIG -x SM_OUTPUT_DATA_DIR -x SM_CHANNELS -x SM_CURRENT_HOST -x SM_MODULE_NAME -x SM_LOG_LEVEL -x SM_FRAMEWORK_MODULE -x SM_INPUT_DIR -x SM_INPUT_CONFIG_DIR -x SM_OUTPUT_DIR -x SM_NUM_CPUS -x SM_NUM_GPUS -x SM_MODEL_DIR -x SM_MODULE_DIR -x SM_TRAINING_ENV -x SM_USER_ARGS -x SM_OUTPUT_INTERMEDIATE_DIR -x SM_HP_OUTPUT_DATA_DIR -x SM_HP_MODEL_ID -x
+
+Process finished with exit code 1
