@@ -8,7 +8,7 @@ users running this script will need to update the following variables
 in a file named `config.py`
 `role`
 `s3_output_location`
-
+`image_uri`
 """
 import config
 
